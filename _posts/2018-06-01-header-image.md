@@ -1,6 +1,8 @@
 ---
 title: Post with Header Image
 tags: TeXt
+header: 
+  theme: light
 article_header:
   type: cover
   image:
