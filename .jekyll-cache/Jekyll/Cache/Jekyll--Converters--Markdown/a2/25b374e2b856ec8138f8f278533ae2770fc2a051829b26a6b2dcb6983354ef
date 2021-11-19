@@ -1,0 +1,182 @@
+I"�Z<h3 id="1-交换两个变量的值">1. 交换两个变量的值</h3>
+
+<blockquote>
+  <p>不借助第三方变量 和 ES6 的解构</p>
+</blockquote>
+
+<font color="#595959">代码题如下：</font>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="c1">// 面试者操作</span>
+<span class="c1">// ...</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span> <span class="c1">// 2</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span> <span class="c1">// 1</span>
+</code></pre></div></div>
+
+<font color="#595959">题解1：</font>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+<span class="nx">a</span> <span class="o">=</span> <span class="p">[</span><span class="nx">b</span><span class="p">,</span> <span class="p">(</span><span class="nx">b</span> <span class="o">=</span> <span class="nx">a</span><span class="p">)][</span><span class="mi">0</span><span class="p">];</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span> <span class="c1">// 2</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span> <span class="c1">// 1</span>
+</code></pre></div></div>
+
+<font color="#595959">题解2：</font>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">b</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+
+<span class="nx">a</span> <span class="o">=</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
+<span class="nx">b</span> <span class="o">=</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span><span class="p">;</span>
+<span class="nx">a</span> <span class="o">=</span> <span class="nx">a</span> <span class="o">-</span> <span class="nx">b</span><span class="p">;</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span> <span class="c1">// 2</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span> <span class="c1">// 1</span>
+</code></pre></div></div>
+
+<h3 id="2-什么是柯里化">2. 什么是柯里化?</h3>
+
+<font color="#000000" size="4">
+    柯里化是一种关于函数的高阶技术，它不仅被用于JavaScript，还被用于其他变成语言。
+    柯里化是一种函数的转换，它是指将一个函数从可调用的f(a,b,c)转换为可调洪的f(a)(b)(c)。
+    柯里化不会调用函数，它只是对函数进行转换。
+</font>
+
+<h3 id="3-实现一个add函数满足以下需求">3. 实现一个add函数，满足以下需求</h3>
+
+<blockquote>
+  <p>函数柯里化</p>
+</blockquote>
+
+<font color="#595959">代码题如下：</font>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)()</span>    <span class="c1">// 6</span>
+<span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)(</span><span class="mi">3</span><span class="p">)()</span>   <span class="c1">// 6</span>
+<span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">)(</span><span class="mi">2</span><span class="p">)(</span><span class="mi">3</span><span class="p">)()</span>  <span class="c1">// 6</span>
+</code></pre></div></div>
+
+<font color="#595959">题解：</font>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// add函数 必须得返回一个函数才行，前期得有变量来储存之前的参数累加和，当该函数接收的参数为0时，即是真正的计算结果的时候...</span>
+<span class="kd">function</span> <span class="nx">add</span><span class="p">(</span> <span class="nx">cahce</span><span class="p">,</span> <span class="p">...</span><span class="nx">args</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// 返回一个 func 函数</span>
+    <span class="k">return</span> <span class="kd">function</span> <span class="nx">func</span><span class="p">(</span> <span class="p">...</span><span class="nx">funcArgs</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">funcArgs</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+            <span class="c1">// 如果 func 函数参数为不为0，就执行累计</span>
+            <span class="nx">cahce</span> <span class="o">=</span> <span class="nx">funcArgs</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">p</span><span class="p">,</span> <span class="nx">c</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="nx">p</span> <span class="o">+=</span> <span class="nx">c</span><span class="p">),</span> <span class="nx">cahce</span><span class="p">)</span>
+            <span class="c1">// 接着返回该 func 函数</span>
+            <span class="k">return</span> <span class="nx">func</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="c1">// 如果 func 函数参数为为0，就返回最终结果</span>
+            <span class="k">return</span> <span class="nx">args</span><span class="p">.</span><span class="nx">reduce</span><span class="p">((</span><span class="nx">p</span><span class="p">,</span> <span class="nx">c</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">(</span><span class="nx">p</span> <span class="o">+=</span> <span class="nx">c</span><span class="p">),</span> <span class="nx">cahce</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)())</span> <span class="c1">// 6</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)(</span><span class="mi">3</span><span class="p">)())</span> <span class="c1">// 6</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">)(</span><span class="mi">2</span><span class="p">)(</span><span class="mi">3</span><span class="p">)())</span> <span class="c1">// 6</span>
+</code></pre></div></div>
+
+<font color="#595959">代码题如下：</font>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>    <span class="c1">// 6</span>
+<span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)(</span><span class="mi">3</span><span class="p">)</span>   <span class="c1">// 6</span>
+<span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">)(</span><span class="mi">2</span><span class="p">)(</span><span class="mi">3</span><span class="p">)</span>  <span class="c1">// 6</span>
+</code></pre></div></div>
+
+<font color="#595959">题解：</font>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">curry</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">fn</span><span class="p">,</span> <span class="p">...</span><span class="nx">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// 函数的参数个数可以通过函数的length属性进行访问 fn.length</span>
+    <span class="k">return</span> <span class="nx">args</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;=</span> <span class="nx">fn</span><span class="p">.</span><span class="nx">length</span> <span class="p">?</span> <span class="c1">// 如果参数个数 大于等于 fn 函数的参数个数，就直接调用 fn函数 将参数传入</span>
+    <span class="nx">fn</span><span class="p">(...</span><span class="nx">args</span><span class="p">)</span> <span class="p">:</span>
+    <span class="p">(...</span><span class="nx">_args</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">curry</span><span class="p">(</span><span class="nx">fn</span><span class="p">,</span> <span class="p">...</span><span class="nx">_args</span><span class="p">,</span> <span class="p">...</span><span class="nx">args</span><span class="p">)</span>  <span class="c1">// 否则将继续进行参数个数累加</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">add1</span> <span class="o">=</span> <span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">,</span> <span class="nx">z</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span> <span class="o">+</span> <span class="nx">z</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">add</span> <span class="o">=</span> <span class="nx">curry</span><span class="p">(</span><span class="nx">add1</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">));</span>   <span class="c1">// 6</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)(</span><span class="mi">3</span><span class="p">));</span>  <span class="c1">// 6</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">add</span><span class="p">(</span><span class="mi">1</span><span class="p">)(</span><span class="mi">2</span><span class="p">)(</span><span class="mi">3</span><span class="p">));</span> <span class="c1">// 6</span>
+</code></pre></div></div>
+
+<h3 id="4-数组值交换">4. 数组值交换</h3>
+
+<font color="#595959">代码题如下：</font>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 给出一个数组</span>
+<span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="kd">const</span> <span class="nx">oldIndex</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="kd">const</span> <span class="nx">newIndex</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">change</span><span class="p">(</span><span class="nx">oldIndex</span><span class="p">,</span><span class="nx">newIndex</span><span class="p">,</span><span class="nx">arr</span><span class="p">)</span> <span class="p">)</span><span class="c1">// [1, 8, 3, 4, 5, 6, 7, 2, 9]</span>
+</code></pre></div></div>
+
+<font color="#595959">题解：</font>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">arr</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">]</span>
+<span class="kd">const</span> <span class="nx">oldIndex</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="kd">const</span> <span class="nx">newIndex</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="kd">function</span> <span class="nx">change</span><span class="p">(</span><span class="nx">oldIndex</span><span class="p">,</span> <span class="nx">newIndex</span><span class="p">,</span> <span class="nx">originArr</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">originArr</span> <span class="o">=</span> <span class="nx">arr</span><span class="p">.</span><span class="nx">slice</span><span class="p">()</span> <span class="c1">// 深拷贝 不修改源数据</span>
+    <span class="nx">originArr</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">oldIndex</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">originArr</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">newIndex</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">originArr</span><span class="p">[</span><span class="nx">oldIndex</span><span class="p">])[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">return</span> <span class="nx">originArr</span>
+<span class="p">}</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">change</span><span class="p">(</span><span class="nx">oldIndex</span><span class="p">,</span> <span class="nx">newIndex</span><span class="p">,</span> <span class="nx">arr</span><span class="p">))</span> <span class="c1">// [1, 8, 3, 4, 5, 6, 7, 2, 9]</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">)</span> <span class="c1">// [1, 2, 3, 4, 5, 6, 7, 8, 9]</span>
+</code></pre></div></div>
+
+<h3 id="5-slice与splice的用法和区别">5. slice与splice的用法和区别</h3>
+
+<p>一、slice(start, end)</p>
+
+<ul>
+  <li>从start开始截取到end结束，但是不包括end</li>
+  <li>返回值为截取出来的元素的集合</li>
+  <li>原始的数组不会发生改变</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">23</span><span class="p">,</span><span class="mi">44</span><span class="p">,</span><span class="mi">55</span><span class="p">,</span><span class="mi">66</span><span class="p">,</span><span class="mi">77</span><span class="p">,</span><span class="mi">888</span><span class="p">,</span><span class="dl">"</span><span class="s2">fff</span><span class="dl">"</span><span class="p">];</span>
+<span class="kd">const</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="nx">arr1</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span> <span class="c1">//从index为2截取到index为4之前不包括4</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr2</span><span class="p">);</span> <span class="c1">//[44,55]</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr1</span><span class="p">);</span> <span class="c1">// [1,23,44,55,66,77,888,"fff"]原始数组没有被改变</span>
+</code></pre></div></div>
+
+<p>二、splice(start,deleteNum, item, ….)</p>
+
+<ul>
+  <li>start参数 开始的位置</li>
+  <li>deleteNum 要截取的个数</li>
+  <li>后面的item为要添加的元素</li>
+  <li>返回值为由被删除的元素组成的一个数组。如果只删除了一个元素，则返回只包含一个元素的数组。如果没有删除元素，则返回空数组</li>
+  <li>这个方法会改变原始数组，数组的长度会发生变化</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">arr3</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="dl">"</span><span class="s2">f1</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">f2</span><span class="dl">"</span><span class="p">];</span>
+<span class="kd">const</span> <span class="nx">arr4</span> <span class="o">=</span> <span class="nx">arr3</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span> <span class="c1">//删除第三个元素以后的三个数组元素(包含第三个元素)</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr4</span><span class="p">);</span> <span class="c1">//[3,4,5];</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr3</span><span class="p">);</span> <span class="c1">//[1,2,6,7,"f1","f2"]; 原始数组被改变</span>
+
+<span class="kd">const</span> <span class="nx">arr5</span> <span class="o">=</span> <span class="nx">arr3</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="dl">"</span><span class="s2">wu</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">leon</span><span class="dl">"</span><span class="p">);</span> 
+<span class="c1">//从第2位开始删除0个元素，插入"wu","leon"</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr5</span><span class="p">);</span> <span class="c1">//[] 返回空数组</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr3</span><span class="p">);</span> <span class="c1">// [1, 2, "wu", "leon", 6, 7, "f1", "f2"]; 原始数组被改变</span>
+
+<span class="kd">const</span> <span class="nx">arr6</span> <span class="o">=</span> <span class="nx">arr3</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="dl">"</span><span class="s2">xiao</span><span class="dl">"</span><span class="p">,</span><span class="dl">"</span><span class="s2">long</span><span class="dl">"</span><span class="p">);</span>
+<span class="c1">//从第2位开始删除3个元素，插入"xiao","long"</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr6</span><span class="p">);</span> <span class="c1">//["wu", "leon", 6]</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr3</span><span class="p">);</span> <span class="c1">//[1, 2, "xiao", "long", 7, "f1", "f2"]</span>
+
+<span class="kd">const</span> <span class="nx">arr7</span> <span class="o">=</span> <span class="nx">arr3</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="c1">//从第三个元素开始删除所有的元素</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr7</span><span class="p">);</span><span class="c1">//["xiao", "long", 7, "f1", "f2"]</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr3</span><span class="p">);</span> <span class="c1">//[1, 2]</span>
+</code></pre></div></div>
+:ET
