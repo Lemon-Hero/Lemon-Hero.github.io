@@ -3,7 +3,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>2021-前端可视化学习 - LiMeng Blog</title>
 
-<meta name="description" content="">
+<meta name="description" content="SVGSVG 是一种基于 XML 语法的图像格式，全称是可缩放矢量图（Scalable Vector Graphics）。其他图像格式都是基于像素的，SVG 则是属于对图像的数学描述，所以它本质上是文本文件，体积较小，且不管放大多少倍都不会失真。SVG 文件可以直接插入网页，成为 DOM 的一部分，然后用 Jav...">
 <link rel="canonical" href="http://localhost:4000/2021/11/19/visualization.html"><link rel="alternate" type="application/rss+xml" title="LiMeng Blog" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
@@ -291,7 +291,28 @@
     <meta itemprop="keywords" content="可视化"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
 <!-- end custom article top snippet -->
-<div class="article__content" itemprop="articleBody">
+<div class="article__content" itemprop="articleBody"><h1 id="svg">SVG</h1>
+
+<p>SVG 是一种基于 XML 语法的图像格式，全称是可缩放矢量图（Scalable Vector Graphics）。其他图像格式都是基于像素的，SVG 则是属于对图像的数学描述，所以它本质上是文本文件，体积较小，且不管放大多少倍都不会失真。</p>
+
+<p>SVG 文件可以直接插入网页，成为 DOM 的一部分，然后用 JavaScript 和 CSS 进行操作。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+<span class="nt">&lt;svg</span>
+  <span class="na">id=</span><span class="s">"mysvg"</span>
+  <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span>
+  <span class="na">viewBox=</span><span class="s">"0 0 800 600"</span>
+  <span class="na">preserveAspectRatio=</span><span class="s">"xMidYMid meet"</span>
+<span class="nt">&gt;</span>
+  <span class="nt">&lt;circle</span> <span class="na">id=</span><span class="s">"mycircle"</span> <span class="na">cx=</span><span class="s">"400"</span> <span class="na">cy=</span><span class="s">"300"</span> <span class="na">r=</span><span class="s">"50"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;svg&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p>SVG 代码也可以写在一个独立文件中，然后用<img />、<object>、<embed />、&lt;iframe&gt;等标签插入网页。</object></p>
 </div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2021-11-19T00:00:00+08:00"><!-- start custom article footer snippet -->
 
 <!-- end custom article footer snippet -->

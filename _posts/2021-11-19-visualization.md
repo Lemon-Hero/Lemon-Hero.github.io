@@ -3,3 +3,29 @@ title: 2021-前端可视化学习
 tags: 可视化
 key: 20211119_lemon_blog
 ---
+
+SVG
+===
+
+SVG 是一种基于 XML 语法的图像格式，全称是可缩放矢量图（Scalable Vector Graphics）。其他图像格式都是基于像素的，SVG 则是属于对图像的数学描述，所以它本质上是文本文件，体积较小，且不管放大多少倍都不会失真。
+
+SVG 文件可以直接插入网页，成为 DOM 的一部分，然后用 JavaScript 和 CSS 进行操作。
+
+```html
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+<svg
+  id="mysvg"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 800 600"
+  preserveAspectRatio="xMidYMid meet"
+>
+  <circle id="mycircle" cx="400" cy="300" r="50" />
+<svg>
+</body>
+</html>
+```
+
+SVG 代码也可以写在一个独立文件中，然后用<img>、<object>、<embed>、<iframe>等标签插入网页。
