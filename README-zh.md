@@ -84,19 +84,6 @@ TeXt 使用 [Tomorrow](https://github.com/chriskempson/tomorrow-theme) 作为它
 | [Archive](https://tianqi.name/jekyll-TeXt-theme/archive.html) | 归档页 |
 | [Layout Examples](https://tianqi.name/jekyll-TeXt-theme/samples.html) | 各种布局示例 |
 
-## 支持我
-
-你的支持是我的动力。你可以通过以下方式支持我：
-
-- 给该项目点赞 🌟
-- 赞同[这个知乎回答](https://www.zhihu.com/question/20223939/answer/122596506)
-- 关注我的 GitHub
-- 打赏
-
-| 微信支付 | 支付宝 |
-| --- | --- |
-| ![微信支付二维码](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/tip_wechat.jpg) | ![支付宝二维码](https://raw.githubusercontent.com/kitian616/jekyll-TeXt-theme/master/docs/assets/images/tip_alipay.jpg) |
-
 ## 其他资源
 
 在 *_includes/icon/social* 目录下有很多的社交产品图标，例如 Behance、Flickr、QQ、微信等，方便修改和使用。
