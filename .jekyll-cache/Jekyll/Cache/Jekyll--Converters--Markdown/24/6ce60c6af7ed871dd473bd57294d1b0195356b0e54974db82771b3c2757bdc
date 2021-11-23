@@ -1,0 +1,383 @@
+I"��<font size="10">SVG</font>
+
+<h1 id="概述">概述</h1>
+
+<p>SVG 是一种基于 XML 语法的图像格式，全称是可缩放矢量图（Scalable Vector Graphics）。其他图像格式都是基于像素的，SVG 则是属于对图像的数学描述，所以它本质上是文本文件，体积较小，且不管放大多少倍都不会失真。</p>
+
+<p>SVG 文件可以直接插入网页，成为 DOM 的一部分，然后用 JavaScript 和 CSS 进行操作。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+<span class="nt">&lt;svg</span>
+  <span class="na">id=</span><span class="s">"mysvg"</span>
+  <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span>
+  <span class="na">viewBox=</span><span class="s">"0 0 800 600"</span>
+  <span class="na">preserveAspectRatio=</span><span class="s">"xMidYMid meet"</span>
+<span class="nt">&gt;</span>
+  <span class="nt">&lt;circle</span> <span class="na">id=</span><span class="s">"mycircle"</span> <span class="na">cx=</span><span class="s">"400"</span> <span class="na">cy=</span><span class="s">"300"</span> <span class="na">r=</span><span class="s">"50"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;svg&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>SVG 代码也可以写在一个独立文件中，然后用<code class="language-plaintext highlighter-rouge">&lt;img&gt;、&lt;object&gt;、&lt;embed&gt;、&lt;iframe&gt;</code>等标签插入网页。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"circle.svg"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;object</span> <span class="na">id=</span><span class="s">"object"</span> <span class="na">data=</span><span class="s">"circle.svg"</span> <span class="na">type=</span><span class="s">"image/svg+xml"</span><span class="nt">&gt;&lt;/object&gt;</span>
+<span class="nt">&lt;embed</span> <span class="na">id=</span><span class="s">"embed"</span> <span class="na">src=</span><span class="s">"icon.svg"</span> <span class="na">type=</span><span class="s">"image/svg+xml"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;iframe</span> <span class="na">id=</span><span class="s">"iframe"</span> <span class="na">src=</span><span class="s">"icon.svg"</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+</code></pre></div></div>
+
+<p>CSS 也可以使用 SVG 文件。</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.logo</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="sx">url(icon.svg)</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>SVG 文件还可以转为 BASE64 编码，然后作为 Data URI 写入网页。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"data:image/svg+xml;base64,[data]"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<h1 id="语法">语法</h1>
+
+<h2 id="svg标签">svg标签</h2>
+
+<p>SVG 代码都放在顶层标签<code class="language-plaintext highlighter-rouge">&lt;svg&gt;</code>之中。下面是一个例子。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;svg</span> <span class="na">width=</span><span class="s">"100%"</span> <span class="na">height=</span><span class="s">"100%"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;circle</span> <span class="na">id=</span><span class="s">"mycircle"</span> <span class="na">cx=</span><span class="s">"50"</span> <span class="na">cy=</span><span class="s">"50"</span> <span class="na">r=</span><span class="s">"50"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;svg&gt;</code>的<code class="language-plaintext highlighter-rouge">width</code>属性和<code class="language-plaintext highlighter-rouge">height</code>属性，指定了 SVG 图像在 HTML 元素中所占据的宽度和高度。除了相对单位，也可以采用绝对单位（单位：像素）。如果不指定这两个属性，SVG 图像默认大小是300像素（宽） x 150像素（高）。</p>
+
+<p>如果只想展示 SVG 图像的一部分，就要指定<code class="language-plaintext highlighter-rouge">viewBox</code>属性。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;svg</span> <span class="na">width=</span><span class="s">"100"</span> <span class="na">height=</span><span class="s">"100"</span> <span class="na">viewBox=</span><span class="s">"50 50 50 50"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;circle</span> <span class="na">id=</span><span class="s">"mycircle"</span> <span class="na">cx=</span><span class="s">"50"</span> <span class="na">cy=</span><span class="s">"50"</span> <span class="na">r=</span><span class="s">"50"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;viewBox&gt;</code>属性的值有四个数字，分别是左上角的横坐标和纵坐标、视口的宽度和高度。上面代码中，SVG 图像是100像素宽 x 100像素高，<code class="language-plaintext highlighter-rouge">viewBox</code>属性指定视口从(50, 50)这个点开始。所以，实际看到的是右下角的四分之一圆。</p>
+
+<p>注意，视口必须适配所在的空间。上面代码中，视口的大小是 50 x 50，由于 SVG 图像的大小是 100 x 100，所以视口会放大去适配 SVG 图像的大小，即放大了四倍。</p>
+
+<p>如果不指定<code class="language-plaintext highlighter-rouge">width</code>属性和<code class="language-plaintext highlighter-rouge">height</code>属性，只指定<code class="language-plaintext highlighter-rouge">viewBox</code>属性，则相当于只给定 SVG 图像的长宽比。这时，SVG 图像的默认大小将等于所在的 HTML 元素的大小。</p>
+
+<h2 id="circle标签">circle标签</h2>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;circle&gt;</code>标签代表圆形。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;svg</span> <span class="na">width=</span><span class="s">"300"</span> <span class="na">height=</span><span class="s">"180"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;circle</span> <span class="na">cx=</span><span class="s">"30"</span>  <span class="na">cy=</span><span class="s">"50"</span> <span class="na">r=</span><span class="s">"25"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;circle</span> <span class="na">cx=</span><span class="s">"90"</span>  <span class="na">cy=</span><span class="s">"50"</span> <span class="na">r=</span><span class="s">"25"</span> <span class="na">class=</span><span class="s">"red"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;circle</span> <span class="na">cx=</span><span class="s">"150"</span> <span class="na">cy=</span><span class="s">"50"</span> <span class="na">r=</span><span class="s">"25"</span> <span class="na">class=</span><span class="s">"fancy"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</code></pre></div></div>
+
+<p>上面的代码定义了三个圆。<code class="language-plaintext highlighter-rouge">&lt;circle&gt;</code>标签的cx、cy、r属性分别为横坐标、纵坐标和半径，单位为像素。坐标都是相对于<code class="language-plaintext highlighter-rouge">&lt;svg&gt;</code>画布的左上角原点。</p>
+
+<p>class属性用来指定对应的 CSS 类。</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.red</span> <span class="p">{</span>
+  <span class="py">fill</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.fancy</span> <span class="p">{</span>
+  <span class="py">fill</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="py">stroke</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span>
+  <span class="py">stroke-width</span><span class="p">:</span> <span class="m">3pt</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>SVG 的 CSS 属性与网页元素有所不同。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code> fill：填充色
+ stroke：描边色
+ stroke-width：边框宽度
+</code></pre></div></div>
+
+<h2 id="line标签">line标签</h2>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;line&gt;</code>标签用来绘制直线。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;svg</span> <span class="na">width=</span><span class="s">"300"</span> <span class="na">height=</span><span class="s">"180"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;line</span> <span class="na">x1=</span><span class="s">"0"</span> <span class="na">y1=</span><span class="s">"0"</span> <span class="na">x2=</span><span class="s">"200"</span> <span class="na">y2=</span><span class="s">"0"</span> <span class="na">style=</span><span class="s">"stroke:rgb(0,0,0);stroke-width:5"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</code></pre></div></div>
+
+<p>上面代码中，<code class="language-plaintext highlighter-rouge">&lt;line&gt;</code>标签的x1属性和y1属性，表示线段起点的横坐标和纵坐标；x2属性和y2属性，表示线段终点的横坐标和纵坐标；style属性表示线段的样式。</p>
+
+<h2 id="polyline标签">polyline标签</h2>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;polyline&gt;</code>标签用于绘制一根折线。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;svg</span> <span class="na">width=</span><span class="s">"300"</span> <span class="na">height=</span><span class="s">"180"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;polyline</span> <span class="na">points=</span><span class="s">"3,3 30,28 3,53"</span> <span class="na">fill=</span><span class="s">"none"</span> <span class="na">stroke=</span><span class="s">"black"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;polyline&gt;</code>的<code class="language-plaintext highlighter-rouge">points</code>属性指定了每个端点的坐标，横坐标与纵坐标之间与逗号分隔，点与点之间用空格分隔。</p>
+
+<h2 id="rect标签">rect标签</h2>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;rect&gt;</code>标签用于绘制矩形。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;svg</span> <span class="na">width=</span><span class="s">"300"</span> <span class="na">height=</span><span class="s">"180"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;rect</span> <span class="na">x=</span><span class="s">"0"</span> <span class="na">y=</span><span class="s">"0"</span> <span class="na">height=</span><span class="s">"100"</span> <span class="na">width=</span><span class="s">"200"</span> <span class="na">style=</span><span class="s">"stroke: #70d5dd; fill: #dd524b"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;rect&gt;</code>的x属性和y属性，指定了矩形左上角端点的横坐标和纵坐标；width属性和height属性指定了矩形的宽度和高度（单位像素）。</p>
+
+<h2 id="ellipse标签">ellipse标签</h2>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;ellipse&gt;</code>标签用于绘制椭圆。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;svg</span> <span class="na">width=</span><span class="s">"300"</span> <span class="na">height=</span><span class="s">"180"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;ellipse</span> <span class="na">cx=</span><span class="s">"60"</span> <span class="na">cy=</span><span class="s">"60"</span> <span class="na">ry=</span><span class="s">"40"</span> <span class="na">rx=</span><span class="s">"20"</span> <span class="na">stroke=</span><span class="s">"black"</span> <span class="na">stroke-width=</span><span class="s">"5"</span> <span class="na">fill=</span><span class="s">"silver"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;ellipse&gt;</code>的cx属性和cy属性，指定了椭圆中心的横坐标和纵坐标（单位像素）；rx属性和ry属性，指定了椭圆横向轴和纵向轴的半径（单位像素）。</p>
+
+<h2 id="polygon标签">polygon标签</h2>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;polygon&gt;</code>标签用于绘制多边形。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;svg</span> <span class="na">width=</span><span class="s">"300"</span> <span class="na">height=</span><span class="s">"180"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;polygon</span> <span class="na">fill=</span><span class="s">"green"</span> <span class="na">stroke=</span><span class="s">"orange"</span> <span class="na">stroke-width=</span><span class="s">"1"</span> <span class="na">points=</span><span class="s">"0,0 100,0 100,100 0,100 0,0"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;polygon&gt;</code>的<code class="language-plaintext highlighter-rouge">points</code>属性指定了每个端点的坐标，横坐标与纵坐标之间与逗号分隔，点与点之间用空格分隔。</p>
+
+<h2 id="path标签">path标签</h2>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;path&gt;</code>标签用于制路径。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;svg</span> <span class="na">width=</span><span class="s">"300"</span> <span class="na">height=</span><span class="s">"180"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;path</span> <span class="na">d=</span><span class="s">"
+  M 18,3
+  L 46,3
+  L 46,40
+  L 61,40
+  L 32,68
+  L 3,40
+  L 18,40
+  Z
+"</span><span class="nt">&gt;&lt;/path&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;path&gt;</code>的d属性表示绘制顺序，它的值是一个长字符串，每个字母表示一个绘制动作，后面跟着坐标。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>M：移动到（moveto）
+L：画直线到（lineto）
+Z：闭合路径
+</code></pre></div></div>
+
+<h2 id="text标签">text标签</h2>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;text&gt;</code>标签用于绘制文本。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;svg</span> <span class="na">width=</span><span class="s">"300"</span> <span class="na">height=</span><span class="s">"180"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;text</span> <span class="na">x=</span><span class="s">"50"</span> <span class="na">y=</span><span class="s">"25"</span><span class="nt">&gt;</span>Hello World<span class="nt">&lt;/text&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;text&gt;</code>的x属性和y属性，表示文本区块基线（baseline）起点的横坐标和纵坐标。文字的样式可以用class或style属性指定。</p>
+
+<h2 id="use标签">use标签</h2>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;use&gt;</code>标签用于复制一个形状。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;svg</span> <span class="na">viewBox=</span><span class="s">"0 0 30 10"</span> <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;circle</span> <span class="na">id=</span><span class="s">"myCircle"</span> <span class="na">cx=</span><span class="s">"5"</span> <span class="na">cy=</span><span class="s">"5"</span> <span class="na">r=</span><span class="s">"4"</span><span class="nt">/&gt;</span>
+
+  <span class="nt">&lt;use</span> <span class="na">href=</span><span class="s">"#myCircle"</span> <span class="na">x=</span><span class="s">"10"</span> <span class="na">y=</span><span class="s">"0"</span> <span class="na">fill=</span><span class="s">"blue"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;use</span> <span class="na">href=</span><span class="s">"#myCircle"</span> <span class="na">x=</span><span class="s">"20"</span> <span class="na">y=</span><span class="s">"0"</span> <span class="na">fill=</span><span class="s">"white"</span> <span class="na">stroke=</span><span class="s">"blue"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;use&gt;</code>的<code class="language-plaintext highlighter-rouge">href</code>属性指定所要复制的节点，x属性和y属性是<code class="language-plaintext highlighter-rouge">&lt;use&gt;</code>左上角的坐标。另外，还可以指定width和height坐标。</p>
+
+<h2 id="g标签">g标签</h2>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;g&gt;</code>标签用于将多个形状组成一个组（group），方便复用。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;svg</span> <span class="na">width=</span><span class="s">"300"</span> <span class="na">height=</span><span class="s">"100"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;g</span> <span class="na">id=</span><span class="s">"myCircle"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;text</span> <span class="na">x=</span><span class="s">"25"</span> <span class="na">y=</span><span class="s">"20"</span><span class="nt">&gt;</span>圆形<span class="nt">&lt;/text&gt;</span>
+    <span class="nt">&lt;circle</span> <span class="na">cx=</span><span class="s">"50"</span> <span class="na">cy=</span><span class="s">"50"</span> <span class="na">r=</span><span class="s">"20"</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;/g&gt;</span>
+
+  <span class="nt">&lt;use</span> <span class="na">href=</span><span class="s">"#myCircle"</span> <span class="na">x=</span><span class="s">"100"</span> <span class="na">y=</span><span class="s">"0"</span> <span class="na">fill=</span><span class="s">"blue"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;use</span> <span class="na">href=</span><span class="s">"#myCircle"</span> <span class="na">x=</span><span class="s">"200"</span> <span class="na">y=</span><span class="s">"0"</span> <span class="na">fill=</span><span class="s">"white"</span> <span class="na">stroke=</span><span class="s">"blue"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</code></pre></div></div>
+
+<h2 id="defs标签">defs标签</h2>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;defs&gt;</code>标签用于自定义形状，它内部的代码不会显示，仅供引用。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;svg</span> <span class="na">width=</span><span class="s">"300"</span> <span class="na">height=</span><span class="s">"100"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;defs&gt;</span>
+    <span class="nt">&lt;g</span> <span class="na">id=</span><span class="s">"myCircle"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;text</span> <span class="na">x=</span><span class="s">"25"</span> <span class="na">y=</span><span class="s">"20"</span><span class="nt">&gt;</span>圆形<span class="nt">&lt;/text&gt;</span>
+      <span class="nt">&lt;circle</span> <span class="na">cx=</span><span class="s">"50"</span> <span class="na">cy=</span><span class="s">"50"</span> <span class="na">r=</span><span class="s">"20"</span><span class="nt">/&gt;</span>
+    <span class="nt">&lt;/g&gt;</span>
+  <span class="nt">&lt;/defs&gt;</span>
+
+  <span class="nt">&lt;use</span> <span class="na">href=</span><span class="s">"#myCircle"</span> <span class="na">x=</span><span class="s">"0"</span> <span class="na">y=</span><span class="s">"0"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;use</span> <span class="na">href=</span><span class="s">"#myCircle"</span> <span class="na">x=</span><span class="s">"100"</span> <span class="na">y=</span><span class="s">"0"</span> <span class="na">fill=</span><span class="s">"blue"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;use</span> <span class="na">href=</span><span class="s">"#myCircle"</span> <span class="na">x=</span><span class="s">"200"</span> <span class="na">y=</span><span class="s">"0"</span> <span class="na">fill=</span><span class="s">"white"</span> <span class="na">stroke=</span><span class="s">"blue"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</code></pre></div></div>
+
+<h2 id="pattern标签">pattern标签</h2>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;pattern&gt;</code>标签用于自定义一个形状，该形状可以被引用来平铺一个区域。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;svg</span> <span class="na">width=</span><span class="s">"500"</span> <span class="na">height=</span><span class="s">"500"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;defs&gt;</span>
+    <span class="nt">&lt;pattern</span> <span class="na">id=</span><span class="s">"dots"</span> <span class="na">x=</span><span class="s">"0"</span> <span class="na">y=</span><span class="s">"0"</span> <span class="na">width=</span><span class="s">"100"</span> <span class="na">height=</span><span class="s">"100"</span> <span class="na">patternUnits=</span><span class="s">"userSpaceOnUse"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;circle</span> <span class="na">fill=</span><span class="s">"#bee9e8"</span> <span class="na">cx=</span><span class="s">"50"</span> <span class="na">cy=</span><span class="s">"50"</span> <span class="na">r=</span><span class="s">"35"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/pattern&gt;</span>
+  <span class="nt">&lt;/defs&gt;</span>
+  <span class="nt">&lt;rect</span> <span class="na">x=</span><span class="s">"0"</span> <span class="na">y=</span><span class="s">"0"</span> <span class="na">width=</span><span class="s">"100%"</span> <span class="na">height=</span><span class="s">"100%"</span> <span class="na">fill=</span><span class="s">"url(#dots)"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</code></pre></div></div>
+
+<p>上面代码中，<code class="language-plaintext highlighter-rouge">&lt;pattern&gt;</code>标签将一个圆形定义为<code class="language-plaintext highlighter-rouge">dots</code>模式。<code class="language-plaintext highlighter-rouge">patternUnits="userSpaceOnUse"</code>表示<code class="language-plaintext highlighter-rouge">&lt;pattern&gt;</code>的宽度和长度是实际的像素值。然后，指定这个模式去填充下面的矩形。</p>
+
+<h2 id="image标签">image标签</h2>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;image&gt;</code>标签用于插入图片文件。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;svg</span> <span class="na">viewBox=</span><span class="s">"0 0 100 100"</span> <span class="na">width=</span><span class="s">"100"</span> <span class="na">height=</span><span class="s">"100"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;image</span> <span class="na">xlink:href=</span><span class="s">"path/to/image.jpg"</span>
+    <span class="na">width=</span><span class="s">"50%"</span> <span class="na">height=</span><span class="s">"50%"</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</code></pre></div></div>
+
+<p>上面代码中，<code class="language-plaintext highlighter-rouge">&lt;image&gt;</code>的<code class="language-plaintext highlighter-rouge">xlink:href</code>属性表示图像的来源。</p>
+
+<h2 id="animate标签">animate标签</h2>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;animate&gt;</code>标签用于产生动画效果。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;svg</span> <span class="na">width=</span><span class="s">"500px"</span> <span class="na">height=</span><span class="s">"500px"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;rect</span> <span class="na">x=</span><span class="s">"0"</span> <span class="na">y=</span><span class="s">"0"</span> <span class="na">width=</span><span class="s">"100"</span> <span class="na">height=</span><span class="s">"100"</span> <span class="na">fill=</span><span class="s">"#feac5e"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;animate</span> <span class="na">attributeName=</span><span class="s">"x"</span> <span class="na">from=</span><span class="s">"0"</span> <span class="na">to=</span><span class="s">"500"</span> <span class="na">dur=</span><span class="s">"2s"</span> <span class="na">repeatCount=</span><span class="s">"indefinite"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/rect&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</code></pre></div></div>
+
+<p>上面代码中，矩形会不断移动，产生动画效果。
+<code class="language-plaintext highlighter-rouge">&lt;animate&gt;</code>的属性含义如下。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>attributeName：发生动画效果的属性名。
+from：单次动画的初始值。
+to：单次动画的结束值。
+dur：单次动画的持续时间。
+repeatCount：动画的循环模式。
+</code></pre></div></div>
+
+<p>可以在多个属性上面定义动画。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;animate</span> <span class="na">attributeName=</span><span class="s">"x"</span> <span class="na">from=</span><span class="s">"0"</span> <span class="na">to=</span><span class="s">"500"</span> <span class="na">dur=</span><span class="s">"2s"</span> <span class="na">repeatCount=</span><span class="s">"indefinite"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;animate</span> <span class="na">attributeName=</span><span class="s">"width"</span> <span class="na">to=</span><span class="s">"500"</span> <span class="na">dur=</span><span class="s">"2s"</span> <span class="na">repeatCount=</span><span class="s">"indefinite"</span> <span class="nt">/&gt;</span>
+</code></pre></div></div>
+
+<h2 id="animatetransform标签">animateTransform标签</h2>
+
+<p><code class="language-plaintext highlighter-rouge">&lt;animate&gt;</code>标签对 CSS 的<code class="language-plaintext highlighter-rouge">transform</code>属性不起作用，如果需要变形，就要使用<code class="language-plaintext highlighter-rouge">&lt;animateTransform&gt;</code>标签。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;svg</span> <span class="na">width=</span><span class="s">"500px"</span> <span class="na">height=</span><span class="s">"500px"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;rect</span> <span class="na">x=</span><span class="s">"250"</span> <span class="na">y=</span><span class="s">"250"</span> <span class="na">width=</span><span class="s">"50"</span> <span class="na">height=</span><span class="s">"50"</span> <span class="na">fill=</span><span class="s">"#4bc0c8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;animateTransform</span> <span class="na">attributeName=</span><span class="s">"transform"</span> <span class="na">type=</span><span class="s">"rotate"</span> <span class="na">begin=</span><span class="s">"0s"</span> <span class="na">dur=</span><span class="s">"10s"</span> <span class="na">from=</span><span class="s">"0 200 200"</span> <span class="na">to=</span><span class="s">"360 400 400"</span> <span class="na">repeatCount=</span><span class="s">"indefinite"</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;/rect&gt;</span>
+<span class="nt">&lt;/svg&gt;</span>
+</code></pre></div></div>
+
+<p>上面代码中，<code class="language-plaintext highlighter-rouge">&lt;animateTransform&gt;</code>的效果为旋转（rotate），这时<code class="language-plaintext highlighter-rouge">from</code>和<code class="language-plaintext highlighter-rouge">to</code>属性值有三个数字，第一个数字是角度值，第二个值和第三个值是旋转中心的坐标。<code class="language-plaintext highlighter-rouge">from="0 200 200"</code>表示开始时，角度为<code class="language-plaintext highlighter-rouge">0</code>，围绕<code class="language-plaintext highlighter-rouge">(200, 200)</code>开始旋转；<code class="language-plaintext highlighter-rouge">to="360 400 400"</code>表示结束时，角度为<code class="language-plaintext highlighter-rouge">360</code>，围绕<code class="language-plaintext highlighter-rouge">(400, 400)</code>旋转。</p>
+
+<h1 id="javascript-操作">JavaScript 操作</h1>
+
+<h2 id="dom操作">DOM操作</h2>
+
+<p>如果 SVG 代码直接写在 HTML 网页之中，它就成为网页 DOM 的一部分，可以直接用 DOM 操作。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;svg</span>
+  <span class="na">id=</span><span class="s">"mysvg"</span>
+  <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span>
+  <span class="na">viewBox=</span><span class="s">"0 0 800 600"</span>
+  <span class="na">preserveAspectRatio=</span><span class="s">"xMidYMid meet"</span>
+<span class="nt">&gt;</span>
+  <span class="nt">&lt;circle</span> <span class="na">id=</span><span class="s">"mycircle"</span> <span class="na">cx=</span><span class="s">"400"</span> <span class="na">cy=</span><span class="s">"300"</span> <span class="na">r=</span><span class="s">"50"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;svg&gt;</span>
+</code></pre></div></div>
+
+<p>上面代码插入网页之后，就可以用 CSS 定制样式。</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">circle</span> <span class="p">{</span>
+  <span class="py">stroke-width</span><span class="p">:</span> <span class="m">5</span><span class="p">;</span>
+  <span class="py">stroke</span><span class="p">:</span> <span class="m">#f00</span><span class="p">;</span>
+  <span class="py">fill</span><span class="p">:</span> <span class="m">#ff0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">circle</span><span class="nd">:hover</span> <span class="p">{</span>
+  <span class="py">stroke</span><span class="p">:</span> <span class="m">#090</span><span class="p">;</span>
+  <span class="py">fill</span><span class="p">:</span> <span class="m">#fff</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>然后，可以用 JavaScript 代码操作 SVG。</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">mycircle</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">mycircle</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="nx">mycircle</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">'</span><span class="s1">click</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">circle clicked - enlarging</span><span class="dl">'</span><span class="p">);</span>
+  <span class="nx">mycircle</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="dl">'</span><span class="s1">r</span><span class="dl">'</span><span class="p">,</span> <span class="mi">60</span><span class="p">);</span>
+<span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>上面代码指定，如果点击图形，就改写<code class="language-plaintext highlighter-rouge">circle</code>元素的<code class="language-plaintext highlighter-rouge">r</code>属性。</p>
+
+<h2 id="获取svg-dom">获取SVG DOM</h2>
+
+<p>使用<code class="language-plaintext highlighter-rouge">&lt;object&gt;</code>、<code class="language-plaintext highlighter-rouge">&lt;iframe&gt;</code>、<code class="language-plaintext highlighter-rouge">&lt;embed&gt;</code>标签插入 SVG 文件，可以获取 SVG DOM</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">svgObject</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">object</span><span class="dl">'</span><span class="p">).</span><span class="nx">contentDocument</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">svgIframe</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">iframe</span><span class="dl">'</span><span class="p">).</span><span class="nx">contentDocument</span><span class="p">;</span>
+<span class="kd">const</span> <span class="nx">svgEmbed</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="dl">'</span><span class="s1">embed</span><span class="dl">'</span><span class="p">).</span><span class="nx">getSVGDocument</span><span class="p">();</span>
+</code></pre></div></div>
+
+<p>注意，如果使用<code class="language-plaintext highlighter-rouge">&lt;img&gt;</code>标签插入 SVG 文件，就无法获取 SVG DOM。</p>
+
+<h2 id="读取-svg-源码">读取 SVG 源码</h2>
+
+<p>由于 SVG 文件就是一段 XML 文本，因此可以通过读取 XML 代码的方式，读取 SVG 源码。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"svg-container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;svg</span>
+    <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span>
+    <span class="na">xmlns:xlink=</span><span class="s">"http://www.w3.org/1999/xlink"</span>
+    <span class="na">xml:space=</span><span class="s">"preserve"</span> <span class="na">width=</span><span class="s">"500"</span> <span class="na">height=</span><span class="s">"440"</span>
+  <span class="nt">&gt;</span>
+    <span class="c">&lt;!-- svg code --&gt;</span>
+  <span class="nt">&lt;/svg&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<p>使用<code class="language-plaintext highlighter-rouge">XMLSerializer</code>实例的<code class="language-plaintext highlighter-rouge">serializeToString()</code>方法，获取 SVG 元素的代码。</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">svgString</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">XMLSerializer</span><span class="p">()</span>
+  <span class="p">.</span><span class="nx">serializeToString</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="dl">'</span><span class="s1">svg</span><span class="dl">'</span><span class="p">));</span>
+</code></pre></div></div>
+:ET

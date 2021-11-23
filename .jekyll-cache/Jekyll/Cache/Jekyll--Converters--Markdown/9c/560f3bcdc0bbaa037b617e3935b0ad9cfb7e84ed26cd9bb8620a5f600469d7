@@ -1,0 +1,50 @@
+I"�<font size="10">SVG</font>
+
+<h1 id="概述">概述</h1>
+
+<p>SVG 是一种基于 XML 语法的图像格式，全称是可缩放矢量图（Scalable Vector Graphics）。其他图像格式都是基于像素的，SVG 则是属于对图像的数学描述，所以它本质上是文本文件，体积较小，且不管放大多少倍都不会失真。</p>
+
+<p>SVG 文件可以直接插入网页，成为 DOM 的一部分，然后用 JavaScript 和 CSS 进行操作。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+<span class="nt">&lt;svg</span>
+  <span class="na">id=</span><span class="s">"mysvg"</span>
+  <span class="na">xmlns=</span><span class="s">"http://www.w3.org/2000/svg"</span>
+  <span class="na">viewBox=</span><span class="s">"0 0 800 600"</span>
+  <span class="na">preserveAspectRatio=</span><span class="s">"xMidYMid meet"</span>
+<span class="nt">&gt;</span>
+  <span class="nt">&lt;circle</span> <span class="na">id=</span><span class="s">"mycircle"</span> <span class="na">cx=</span><span class="s">"400"</span> <span class="na">cy=</span><span class="s">"300"</span> <span class="na">r=</span><span class="s">"50"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;svg&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+
+<p>SVG 代码也可以写在一个独立文件中，然后用<code class="language-plaintext highlighter-rouge">&lt;img&gt;、&lt;object&gt;、&lt;embed&gt;、&lt;iframe&gt;</code>等标签插入网页。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"circle.svg"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;object</span> <span class="na">id=</span><span class="s">"object"</span> <span class="na">data=</span><span class="s">"circle.svg"</span> <span class="na">type=</span><span class="s">"image/svg+xml"</span><span class="nt">&gt;&lt;/object&gt;</span>
+<span class="nt">&lt;embed</span> <span class="na">id=</span><span class="s">"embed"</span> <span class="na">src=</span><span class="s">"icon.svg"</span> <span class="na">type=</span><span class="s">"image/svg+xml"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;iframe</span> <span class="na">id=</span><span class="s">"iframe"</span> <span class="na">src=</span><span class="s">"icon.svg"</span><span class="nt">&gt;&lt;/iframe&gt;</span>
+</code></pre></div></div>
+
+<p>CSS 也可以使用 SVG 文件。</p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.logo</span> <span class="p">{</span>
+  <span class="nl">background</span><span class="p">:</span> <span class="sx">url(icon.svg)</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>SVG 文件还可以转为 BASE64 编码，然后作为 Data URI 写入网页。</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"data:image/svg+xml;base64,[data]"</span><span class="nt">&gt;</span>
+</code></pre></div></div>
+
+<h1 id="语法">语法</h1>
+
+<h2 id="标签">标签</h2>
+
+<p>SVG 代码都放在顶层标签<svg>之中。下面是一个例子。</svg></p>
+:ET

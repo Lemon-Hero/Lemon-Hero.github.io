@@ -1,5 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh" /><updated>2021-11-19T17:34:02+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">LiMeng Blog</title><subtitle>This is Li Meng's personal blog
-</subtitle><author><name>LiMeng</name></author><entry><title type="html">2021-前端可视化学习</title><link href="http://localhost:4000/2021/11/19/visualization.html" rel="alternate" type="text/html" title="2021-前端可视化学习" /><published>2021-11-19T00:00:00+08:00</published><updated>2021-11-19T00:00:00+08:00</updated><id>http://localhost:4000/2021/11/19/visualization</id><content type="html" xml:base="http://localhost:4000/2021/11/19/visualization.html">&lt;h1 id=&quot;svg&quot;&gt;SVG&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh" /><updated>2021-11-23T10:55:47+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">LiMeng Blog</title><subtitle>This is Li Meng's personal blog
+</subtitle><author><name>LiMeng</name></author><entry><title type="html">2021-SVG学习</title><link href="http://localhost:4000/2021/11/19/visualization.html" rel="alternate" type="text/html" title="2021-SVG学习" /><published>2021-11-19T00:00:00+08:00</published><updated>2021-11-19T00:00:00+08:00</updated><id>http://localhost:4000/2021/11/19/visualization</id><content type="html" xml:base="http://localhost:4000/2021/11/19/visualization.html">&lt;font size=&quot;10&quot;&gt;SVG&lt;/font&gt;
+
+&lt;h1 id=&quot;概述&quot;&gt;概述&lt;/h1&gt;
 
 &lt;p&gt;SVG 是一种基于 XML 语法的图像格式，全称是可缩放矢量图（Scalable Vector Graphics）。其他图像格式都是基于像素的，SVG 则是属于对图像的数学描述，所以它本质上是文本文件，体积较小，且不管放大多少倍都不会失真。&lt;/p&gt;
 
@@ -20,7 +22,447 @@
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;SVG 代码也可以写在一个独立文件中，然后用&lt;img /&gt;、&lt;object&gt;、&lt;embed /&gt;、&amp;lt;iframe&amp;gt;等标签插入网页。&lt;/object&gt;&lt;/p&gt;</content><author><name>LiMeng</name></author><category term="可视化" /><summary type="html">SVG SVG 是一种基于 XML 语法的图像格式，全称是可缩放矢量图（Scalable Vector Graphics）。其他图像格式都是基于像素的，SVG 则是属于对图像的数学描述，所以它本质上是文本文件，体积较小，且不管放大多少倍都不会失真。 SVG 文件可以直接插入网页，成为 DOM 的一部分，然后用 JavaScript 和 CSS 进行操作。 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;svg id=&quot;mysvg&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 800 600&quot; preserveAspectRatio=&quot;xMidYMid meet&quot; &amp;gt; &amp;lt;circle id=&quot;mycircle&quot; cx=&quot;400&quot; cy=&quot;300&quot; r=&quot;50&quot; /&amp;gt; &amp;lt;svg&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; SVG 代码也可以写在一个独立文件中，然后用、、、&amp;lt;iframe&amp;gt;等标签插入网页。</summary></entry><entry><title type="html">2021-11 复习</title><link href="http://localhost:4000/2021/11/09/review.html" rel="alternate" type="text/html" title="2021-11 复习" /><published>2021-11-09T00:00:00+08:00</published><updated>2021-11-09T00:00:00+08:00</updated><id>http://localhost:4000/2021/11/09/review</id><content type="html" xml:base="http://localhost:4000/2021/11/09/review.html">&lt;h3 id=&quot;1-交换两个变量的值&quot;&gt;1. 交换两个变量的值&lt;/h3&gt;
+
+&lt;p&gt;SVG 代码也可以写在一个独立文件中，然后用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;img&amp;gt;、&amp;lt;object&amp;gt;、&amp;lt;embed&amp;gt;、&amp;lt;iframe&amp;gt;&lt;/code&gt;等标签插入网页。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;circle.svg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;object&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;object&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;data=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;circle.svg&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;image/svg+xml&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/object&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;embed&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;embed&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;icon.svg&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;image/svg+xml&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;iframe&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;iframe&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;icon.svg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;CSS 也可以使用 SVG 文件。&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.logo&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;url(icon.svg)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;SVG 文件还可以转为 BASE64 编码，然后作为 Data URI 写入网页。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;data:image/svg+xml;base64,[data]&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;语法&quot;&gt;语法&lt;/h1&gt;
+
+&lt;h2 id=&quot;svg标签&quot;&gt;svg标签&lt;/h2&gt;
+
+&lt;p&gt;SVG 代码都放在顶层标签&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;svg&amp;gt;&lt;/code&gt;之中。下面是一个例子。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;svg&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100%&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100%&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;circle&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mycircle&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cx=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cy=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;r=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/svg&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;svg&amp;gt;&lt;/code&gt;的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;width&lt;/code&gt;属性和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;height&lt;/code&gt;属性，指定了 SVG 图像在 HTML 元素中所占据的宽度和高度。除了相对单位，也可以采用绝对单位（单位：像素）。如果不指定这两个属性，SVG 图像默认大小是300像素（宽） x 150像素（高）。&lt;/p&gt;
+
+&lt;p&gt;如果只想展示 SVG 图像的一部分，就要指定&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viewBox&lt;/code&gt;属性。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;svg&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;viewBox=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50 50 50 50&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;circle&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mycircle&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cx=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cy=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;r=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/svg&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;viewBox&amp;gt;&lt;/code&gt;属性的值有四个数字，分别是左上角的横坐标和纵坐标、视口的宽度和高度。上面代码中，SVG 图像是100像素宽 x 100像素高，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viewBox&lt;/code&gt;属性指定视口从(50, 50)这个点开始。所以，实际看到的是右下角的四分之一圆。&lt;/p&gt;
+
+&lt;p&gt;注意，视口必须适配所在的空间。上面代码中，视口的大小是 50 x 50，由于 SVG 图像的大小是 100 x 100，所以视口会放大去适配 SVG 图像的大小，即放大了四倍。&lt;/p&gt;
+
+&lt;p&gt;如果不指定&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;width&lt;/code&gt;属性和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;height&lt;/code&gt;属性，只指定&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;viewBox&lt;/code&gt;属性，则相当于只给定 SVG 图像的长宽比。这时，SVG 图像的默认大小将等于所在的 HTML 元素的大小。&lt;/p&gt;
+
+&lt;h2 id=&quot;circle标签&quot;&gt;circle标签&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;circle&amp;gt;&lt;/code&gt;标签代表圆形。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;svg&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;300&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;180&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;circle&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cx=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;30&quot;&lt;/span&gt;  &lt;span class=&quot;na&quot;&gt;cy=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;r=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;25&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;circle&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cx=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;90&quot;&lt;/span&gt;  &lt;span class=&quot;na&quot;&gt;cy=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;r=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;25&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;red&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;circle&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cx=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;150&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cy=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;r=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;25&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;fancy&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/svg&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面的代码定义了三个圆。&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;circle&amp;gt;&lt;/code&gt;标签的cx、cy、r属性分别为横坐标、纵坐标和半径，单位为像素。坐标都是相对于&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;svg&amp;gt;&lt;/code&gt;画布的左上角原点。&lt;/p&gt;
+
+&lt;p&gt;class属性用来指定对应的 CSS 类。&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;.red&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;.fancy&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;none&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;stroke&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;black&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;stroke-width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;3pt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;SVG 的 CSS 属性与网页元素有所不同。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; fill：填充色
+ stroke：描边色
+ stroke-width：边框宽度
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;line标签&quot;&gt;line标签&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;line&amp;gt;&lt;/code&gt;标签用来绘制直线。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;svg&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;300&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;180&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;line&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;x1=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;y1=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;x2=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;200&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;y2=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stroke:rgb(0,0,0);stroke-width:5&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/svg&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面代码中，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;line&amp;gt;&lt;/code&gt;标签的x1属性和y1属性，表示线段起点的横坐标和纵坐标；x2属性和y2属性，表示线段终点的横坐标和纵坐标；style属性表示线段的样式。&lt;/p&gt;
+
+&lt;h2 id=&quot;polyline标签&quot;&gt;polyline标签&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;polyline&amp;gt;&lt;/code&gt;标签用于绘制一根折线。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;svg&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;300&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;180&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;polyline&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;points=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;3,3 30,28 3,53&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;fill=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;none&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;stroke=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;black&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/svg&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;polyline&amp;gt;&lt;/code&gt;的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;points&lt;/code&gt;属性指定了每个端点的坐标，横坐标与纵坐标之间与逗号分隔，点与点之间用空格分隔。&lt;/p&gt;
+
+&lt;h2 id=&quot;rect标签&quot;&gt;rect标签&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;rect&amp;gt;&lt;/code&gt;标签用于绘制矩形。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;svg&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;300&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;180&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;rect&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;x=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;y=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;200&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stroke: #70d5dd; fill: #dd524b&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/svg&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;rect&amp;gt;&lt;/code&gt;的x属性和y属性，指定了矩形左上角端点的横坐标和纵坐标；width属性和height属性指定了矩形的宽度和高度（单位像素）。&lt;/p&gt;
+
+&lt;h2 id=&quot;ellipse标签&quot;&gt;ellipse标签&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;ellipse&amp;gt;&lt;/code&gt;标签用于绘制椭圆。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;svg&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;300&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;180&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;ellipse&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cx=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;60&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cy=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;60&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ry=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;40&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rx=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;20&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;stroke=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;black&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;stroke-width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;5&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;fill=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;silver&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/svg&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;ellipse&amp;gt;&lt;/code&gt;的cx属性和cy属性，指定了椭圆中心的横坐标和纵坐标（单位像素）；rx属性和ry属性，指定了椭圆横向轴和纵向轴的半径（单位像素）。&lt;/p&gt;
+
+&lt;h2 id=&quot;polygon标签&quot;&gt;polygon标签&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;polygon&amp;gt;&lt;/code&gt;标签用于绘制多边形。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;svg&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;300&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;180&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;polygon&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;fill=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;green&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;stroke=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;orange&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;stroke-width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;points=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0,0 100,0 100,100 0,100 0,0&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/svg&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;polygon&amp;gt;&lt;/code&gt;的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;points&lt;/code&gt;属性指定了每个端点的坐标，横坐标与纵坐标之间与逗号分隔，点与点之间用空格分隔。&lt;/p&gt;
+
+&lt;h2 id=&quot;path标签&quot;&gt;path标签&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;path&amp;gt;&lt;/code&gt;标签用于制路径。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;svg&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;300&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;180&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;path&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;d=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;
+  M 18,3
+  L 46,3
+  L 46,40
+  L 61,40
+  L 32,68
+  L 3,40
+  L 18,40
+  Z
+&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/path&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/svg&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;path&amp;gt;&lt;/code&gt;的d属性表示绘制顺序，它的值是一个长字符串，每个字母表示一个绘制动作，后面跟着坐标。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;M：移动到（moveto）
+L：画直线到（lineto）
+Z：闭合路径
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;text标签&quot;&gt;text标签&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text&amp;gt;&lt;/code&gt;标签用于绘制文本。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;svg&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;300&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;180&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;text&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;x=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;y=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;25&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Hello World&lt;span class=&quot;nt&quot;&gt;&amp;lt;/text&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/svg&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;text&amp;gt;&lt;/code&gt;的x属性和y属性，表示文本区块基线（baseline）起点的横坐标和纵坐标。文字的样式可以用class或style属性指定。&lt;/p&gt;
+
+&lt;h2 id=&quot;use标签&quot;&gt;use标签&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;use&amp;gt;&lt;/code&gt;标签用于复制一个形状。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;svg&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;viewBox=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0 0 30 10&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xmlns=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://www.w3.org/2000/svg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;circle&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;myCircle&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cx=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;5&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cy=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;5&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;r=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;4&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;use&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#myCircle&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;x=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;10&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;y=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;fill=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;blue&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;use&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#myCircle&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;x=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;20&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;y=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;fill=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;white&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;stroke=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;blue&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/svg&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;use&amp;gt;&lt;/code&gt;的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;href&lt;/code&gt;属性指定所要复制的节点，x属性和y属性是&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;use&amp;gt;&lt;/code&gt;左上角的坐标。另外，还可以指定width和height坐标。&lt;/p&gt;
+
+&lt;h2 id=&quot;g标签&quot;&gt;g标签&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;g&amp;gt;&lt;/code&gt;标签用于将多个形状组成一个组（group），方便复用。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;svg&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;300&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;g&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;myCircle&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;text&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;x=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;25&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;y=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;20&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;圆形&lt;span class=&quot;nt&quot;&gt;&amp;lt;/text&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;circle&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cx=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cy=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;r=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;20&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/g&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;use&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#myCircle&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;x=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;y=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;fill=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;blue&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;use&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#myCircle&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;x=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;200&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;y=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;fill=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;white&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;stroke=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;blue&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/svg&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;defs标签&quot;&gt;defs标签&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;defs&amp;gt;&lt;/code&gt;标签用于自定义形状，它内部的代码不会显示，仅供引用。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;svg&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;300&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;defs&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;g&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;myCircle&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;text&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;x=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;25&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;y=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;20&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;圆形&lt;span class=&quot;nt&quot;&gt;&amp;lt;/text&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;circle&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cx=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cy=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;r=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;20&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/g&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/defs&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;use&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#myCircle&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;x=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;y=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;use&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#myCircle&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;x=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;y=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;fill=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;blue&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;use&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#myCircle&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;x=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;200&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;y=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;fill=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;white&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;stroke=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;blue&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/svg&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;pattern标签&quot;&gt;pattern标签&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;pattern&amp;gt;&lt;/code&gt;标签用于自定义一个形状，该形状可以被引用来平铺一个区域。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;svg&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;500&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;500&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;defs&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;pattern&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dots&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;x=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;y=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;patternUnits=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;userSpaceOnUse&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;circle&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;fill=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#bee9e8&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cx=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cy=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;r=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;35&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/pattern&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/defs&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;rect&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;x=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;y=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100%&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100%&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;fill=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;url(#dots)&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/svg&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面代码中，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;pattern&amp;gt;&lt;/code&gt;标签将一个圆形定义为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dots&lt;/code&gt;模式。&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;patternUnits=&quot;userSpaceOnUse&quot;&lt;/code&gt;表示&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;pattern&amp;gt;&lt;/code&gt;的宽度和长度是实际的像素值。然后，指定这个模式去填充下面的矩形。&lt;/p&gt;
+
+&lt;h2 id=&quot;image标签&quot;&gt;image标签&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;image&amp;gt;&lt;/code&gt;标签用于插入图片文件。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;svg&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;viewBox=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0 0 100 100&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;image&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;xlink:href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;path/to/image.jpg&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50%&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50%&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/svg&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面代码中，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;image&amp;gt;&lt;/code&gt;的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xlink:href&lt;/code&gt;属性表示图像的来源。&lt;/p&gt;
+
+&lt;h2 id=&quot;animate标签&quot;&gt;animate标签&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;animate&amp;gt;&lt;/code&gt;标签用于产生动画效果。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;svg&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;500px&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;500px&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;rect&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;x=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;y=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;fill=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#feac5e&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;animate&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;attributeName=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;x&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;from=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;to=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;500&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;dur=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;2s&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;repeatCount=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;indefinite&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/rect&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/svg&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面代码中，矩形会不断移动，产生动画效果。
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;animate&amp;gt;&lt;/code&gt;的属性含义如下。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;attributeName：发生动画效果的属性名。
+from：单次动画的初始值。
+to：单次动画的结束值。
+dur：单次动画的持续时间。
+repeatCount：动画的循环模式。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;可以在多个属性上面定义动画。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;animate&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;attributeName=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;x&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;from=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;to=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;500&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;dur=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;2s&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;repeatCount=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;indefinite&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;animate&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;attributeName=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;width&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;to=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;500&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;dur=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;2s&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;repeatCount=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;indefinite&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;animatetransform标签&quot;&gt;animateTransform标签&lt;/h2&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;animate&amp;gt;&lt;/code&gt;标签对 CSS 的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;transform&lt;/code&gt;属性不起作用，如果需要变形，就要使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;animateTransform&amp;gt;&lt;/code&gt;标签。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;svg&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;500px&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;500px&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;rect&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;x=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;250&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;y=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;250&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;fill=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#4bc0c8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;animateTransform&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;attributeName=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;transform&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;rotate&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;begin=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0s&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;dur=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;10s&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;from=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0 200 200&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;to=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;360 400 400&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;repeatCount=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;indefinite&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/rect&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/svg&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面代码中，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;animateTransform&amp;gt;&lt;/code&gt;的效果为旋转（rotate），这时&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;from&lt;/code&gt;和&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;to&lt;/code&gt;属性值有三个数字，第一个数字是角度值，第二个值和第三个值是旋转中心的坐标。&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;from=&quot;0 200 200&quot;&lt;/code&gt;表示开始时，角度为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt;，围绕&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(200, 200)&lt;/code&gt;开始旋转；&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;to=&quot;360 400 400&quot;&lt;/code&gt;表示结束时，角度为&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;360&lt;/code&gt;，围绕&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(400, 400)&lt;/code&gt;旋转。&lt;/p&gt;
+
+&lt;h1 id=&quot;javascript-操作&quot;&gt;JavaScript 操作&lt;/h1&gt;
+
+&lt;h2 id=&quot;dom操作&quot;&gt;DOM操作&lt;/h2&gt;
+
+&lt;p&gt;如果 SVG 代码直接写在 HTML 网页之中，它就成为网页 DOM 的一部分，可以直接用 DOM 操作。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;svg&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mysvg&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;xmlns=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://www.w3.org/2000/svg&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;viewBox=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0 0 800 600&quot;&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;preserveAspectRatio=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;xMidYMid meet&quot;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;circle&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;mycircle&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cx=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;400&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cy=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;300&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;r=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;svg&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面代码插入网页之后，就可以用 CSS 定制样式。&lt;/p&gt;
+
+&lt;div class=&quot;language-css highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;circle&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;stroke-width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;stroke&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#f00&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#ff0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;circle&lt;/span&gt;&lt;span class=&quot;nd&quot;&gt;:hover&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;stroke&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#090&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;fill&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;#fff&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;然后，可以用 JavaScript 代码操作 SVG。&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mycircle&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;mycircle&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;mycircle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;circle clicked - enlarging&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;mycircle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;setAttribute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;60&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面代码指定，如果点击图形，就改写&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;circle&lt;/code&gt;元素的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;r&lt;/code&gt;属性。&lt;/p&gt;
+
+&lt;h2 id=&quot;获取svg-dom&quot;&gt;获取SVG DOM&lt;/h2&gt;
+
+&lt;p&gt;使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;object&amp;gt;&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;iframe&amp;gt;&lt;/code&gt;、&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;embed&amp;gt;&lt;/code&gt;标签插入 SVG 文件，可以获取 SVG DOM&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;svgObject&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;object&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;contentDocument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;svgIframe&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;iframe&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;contentDocument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;svgEmbed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;embed&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getSVGDocument&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;注意，如果使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;img&amp;gt;&lt;/code&gt;标签插入 SVG 文件，就无法获取 SVG DOM。&lt;/p&gt;
+
+&lt;h2 id=&quot;读取-svg-源码&quot;&gt;读取 SVG 源码&lt;/h2&gt;
+
+&lt;p&gt;由于 SVG 文件就是一段 XML 文本，因此可以通过读取 XML 代码的方式，读取 SVG 源码。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;svg-container&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;svg&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;xmlns=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://www.w3.org/2000/svg&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;xmlns:xlink=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://www.w3.org/1999/xlink&quot;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;xml:space=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;preserve&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;500&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;440&quot;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- svg code --&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/svg&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;使用&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;XMLSerializer&lt;/code&gt;实例的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;serializeToString()&lt;/code&gt;方法，获取 SVG 元素的代码。&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;svgString&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;XMLSerializer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;serializeToString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;querySelector&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;svg&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;svg-图像转为-canvas-图像&quot;&gt;SVG 图像转为 Canvas 图像&lt;/h2&gt;
+
+&lt;p&gt;首先，需要新建一个&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Image&lt;/code&gt;对象，将 SVG 图像指定到该&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Image&lt;/code&gt;对象的&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;src&lt;/code&gt;属性。&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;svg&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Blob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;svgString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;image/svg+xml;charset=utf-8&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;DOMURL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;URL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;webkitURL&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;DOMURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createObjectURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;svg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;然后，当图像加载完成后，再将它绘制到&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;canvas&amp;gt;&lt;/code&gt;元素。&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onload&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;canvas&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;canvas&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ctx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;canvas&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getContext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;2d&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;ctx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;drawImage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;img&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;实力折线图&quot;&gt;实力：折线图&lt;/h1&gt;
+
+&lt;p&gt;下面将一张数据表格画成折线图。&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;Date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Amount&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;-----|------&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;2014&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;01&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;2014&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;02&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;2014&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;03&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;2014&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;04&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mo&quot;&gt;01&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;80&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;上面的图形，可以画成一个坐标系，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Date&lt;/code&gt;作为横轴，&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Amount&lt;/code&gt;作为纵轴，四行数据画成一个数据点。&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;svg&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;350&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;160&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;g&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;className=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;layer&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;transform=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;translate(60,10)&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;circle&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;r=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;5&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cx=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cy=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;105&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;circle&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;r=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;5&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cx=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;90&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cy=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;90&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;circle&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;r=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;5&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cx=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;180&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cy=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;60&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;circle&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;r=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;5&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cx=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;270&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;cy=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;polyline&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;points=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0,105 90,90 180,60 270,0&quot;&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;fill=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;none&quot;&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;stroke=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;black&quot;&lt;/span&gt;
+      &lt;span class=&quot;na&quot;&gt;strokeWidth=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1&quot;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;g&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;className=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;y axis&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;line&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;x1=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;y1=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;x2=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;y2=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;120&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;style=
+      &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;text&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;x=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;-40&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;y=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;105&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;dy=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;5&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        $10
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/text&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;text&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;x=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;-40&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;y=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;dy=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;5&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        $80
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/text&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/g&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;g&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;className=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;x axis&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;transform=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;translate(0, 120)&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;line&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;x1=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;y1=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;x2=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;270&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;y2=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;style=
+      &lt;/span&gt;&lt;span class=&quot;s&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;text&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;x=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;-30&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;y=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;20&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        January 2014
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/text&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;text&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;x=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;240&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;y=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;20&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        April
+      &lt;span class=&quot;nt&quot;&gt;&amp;lt;/text&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/g&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/g&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/svg&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>LiMeng</name></author><category term="可视化" /><summary type="html">SVG 概述 SVG 是一种基于 XML 语法的图像格式，全称是可缩放矢量图（Scalable Vector Graphics）。其他图像格式都是基于像素的，SVG 则是属于对图像的数学描述，所以它本质上是文本文件，体积较小，且不管放大多少倍都不会失真。 SVG 文件可以直接插入网页，成为 DOM 的一部分，然后用 JavaScript 和 CSS 进行操作。 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;svg id=&quot;mysvg&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 800 600&quot; preserveAspectRatio=&quot;xMidYMid meet&quot; &amp;gt; &amp;lt;circle id=&quot;mycircle&quot; cx=&quot;400&quot; cy=&quot;300&quot; r=&quot;50&quot; /&amp;gt; &amp;lt;svg&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; SVG 代码也可以写在一个独立文件中，然后用&amp;lt;img&amp;gt;、&amp;lt;object&amp;gt;、&amp;lt;embed&amp;gt;、&amp;lt;iframe&amp;gt;等标签插入网页。 &amp;lt;img src=&quot;circle.svg&quot;&amp;gt; &amp;lt;object id=&quot;object&quot; data=&quot;circle.svg&quot; type=&quot;image/svg+xml&quot;&amp;gt;&amp;lt;/object&amp;gt; &amp;lt;embed id=&quot;embed&quot; src=&quot;icon.svg&quot; type=&quot;image/svg+xml&quot;&amp;gt; &amp;lt;iframe id=&quot;iframe&quot; src=&quot;icon.svg&quot;&amp;gt;&amp;lt;/iframe&amp;gt; CSS 也可以使用 SVG 文件。 .logo { background: url(icon.svg); } SVG 文件还可以转为 BASE64 编码，然后作为 Data URI 写入网页。 &amp;lt;img src=&quot;data:image/svg+xml;base64,[data]&quot;&amp;gt; 语法 svg标签 SVG 代码都放在顶层标签&amp;lt;svg&amp;gt;之中。下面是一个例子。 &amp;lt;svg width=&quot;100%&quot; height=&quot;100%&quot;&amp;gt; &amp;lt;circle id=&quot;mycircle&quot; cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;50&quot; /&amp;gt; &amp;lt;/svg&amp;gt; &amp;lt;svg&amp;gt;的width属性和height属性，指定了 SVG 图像在 HTML 元素中所占据的宽度和高度。除了相对单位，也可以采用绝对单位（单位：像素）。如果不指定这两个属性，SVG 图像默认大小是300像素（宽） x 150像素（高）。 如果只想展示 SVG 图像的一部分，就要指定viewBox属性。 &amp;lt;svg width=&quot;100&quot; height=&quot;100&quot; viewBox=&quot;50 50 50 50&quot;&amp;gt; &amp;lt;circle id=&quot;mycircle&quot; cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;50&quot; /&amp;gt; &amp;lt;/svg&amp;gt; &amp;lt;viewBox&amp;gt;属性的值有四个数字，分别是左上角的横坐标和纵坐标、视口的宽度和高度。上面代码中，SVG 图像是100像素宽 x 100像素高，viewBox属性指定视口从(50, 50)这个点开始。所以，实际看到的是右下角的四分之一圆。 注意，视口必须适配所在的空间。上面代码中，视口的大小是 50 x 50，由于 SVG 图像的大小是 100 x 100，所以视口会放大去适配 SVG 图像的大小，即放大了四倍。 如果不指定width属性和height属性，只指定viewBox属性，则相当于只给定 SVG 图像的长宽比。这时，SVG 图像的默认大小将等于所在的 HTML 元素的大小。 circle标签 &amp;lt;circle&amp;gt;标签代表圆形。 &amp;lt;svg width=&quot;300&quot; height=&quot;180&quot;&amp;gt; &amp;lt;circle cx=&quot;30&quot; cy=&quot;50&quot; r=&quot;25&quot; /&amp;gt; &amp;lt;circle cx=&quot;90&quot; cy=&quot;50&quot; r=&quot;25&quot; class=&quot;red&quot; /&amp;gt; &amp;lt;circle cx=&quot;150&quot; cy=&quot;50&quot; r=&quot;25&quot; class=&quot;fancy&quot; /&amp;gt; &amp;lt;/svg&amp;gt; 上面的代码定义了三个圆。&amp;lt;circle&amp;gt;标签的cx、cy、r属性分别为横坐标、纵坐标和半径，单位为像素。坐标都是相对于&amp;lt;svg&amp;gt;画布的左上角原点。 class属性用来指定对应的 CSS 类。 .red { fill: red; } .fancy { fill: none; stroke: black; stroke-width: 3pt; } SVG 的 CSS 属性与网页元素有所不同。 fill：填充色 stroke：描边色 stroke-width：边框宽度 line标签 &amp;lt;line&amp;gt;标签用来绘制直线。 &amp;lt;svg width=&quot;300&quot; height=&quot;180&quot;&amp;gt; &amp;lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;200&quot; y2=&quot;0&quot; style=&quot;stroke:rgb(0,0,0);stroke-width:5&quot; /&amp;gt; &amp;lt;/svg&amp;gt; 上面代码中，&amp;lt;line&amp;gt;标签的x1属性和y1属性，表示线段起点的横坐标和纵坐标；x2属性和y2属性，表示线段终点的横坐标和纵坐标；style属性表示线段的样式。 polyline标签 &amp;lt;polyline&amp;gt;标签用于绘制一根折线。 &amp;lt;svg width=&quot;300&quot; height=&quot;180&quot;&amp;gt; &amp;lt;polyline points=&quot;3,3 30,28 3,53&quot; fill=&quot;none&quot; stroke=&quot;black&quot; /&amp;gt; &amp;lt;/svg&amp;gt; &amp;lt;polyline&amp;gt;的points属性指定了每个端点的坐标，横坐标与纵坐标之间与逗号分隔，点与点之间用空格分隔。 rect标签 &amp;lt;rect&amp;gt;标签用于绘制矩形。 &amp;lt;svg width=&quot;300&quot; height=&quot;180&quot;&amp;gt; &amp;lt;rect x=&quot;0&quot; y=&quot;0&quot; height=&quot;100&quot; width=&quot;200&quot; style=&quot;stroke: #70d5dd; fill: #dd524b&quot; /&amp;gt; &amp;lt;/svg&amp;gt; &amp;lt;rect&amp;gt;的x属性和y属性，指定了矩形左上角端点的横坐标和纵坐标；width属性和height属性指定了矩形的宽度和高度（单位像素）。 ellipse标签 &amp;lt;ellipse&amp;gt;标签用于绘制椭圆。 &amp;lt;svg width=&quot;300&quot; height=&quot;180&quot;&amp;gt; &amp;lt;ellipse cx=&quot;60&quot; cy=&quot;60&quot; ry=&quot;40&quot; rx=&quot;20&quot; stroke=&quot;black&quot; stroke-width=&quot;5&quot; fill=&quot;silver&quot;/&amp;gt; &amp;lt;/svg&amp;gt; &amp;lt;ellipse&amp;gt;的cx属性和cy属性，指定了椭圆中心的横坐标和纵坐标（单位像素）；rx属性和ry属性，指定了椭圆横向轴和纵向轴的半径（单位像素）。 polygon标签 &amp;lt;polygon&amp;gt;标签用于绘制多边形。 &amp;lt;svg width=&quot;300&quot; height=&quot;180&quot;&amp;gt; &amp;lt;polygon fill=&quot;green&quot; stroke=&quot;orange&quot; stroke-width=&quot;1&quot; points=&quot;0,0 100,0 100,100 0,100 0,0&quot;/&amp;gt; &amp;lt;/svg&amp;gt; &amp;lt;polygon&amp;gt;的points属性指定了每个端点的坐标，横坐标与纵坐标之间与逗号分隔，点与点之间用空格分隔。 path标签 &amp;lt;path&amp;gt;标签用于制路径。 &amp;lt;svg width=&quot;300&quot; height=&quot;180&quot;&amp;gt; &amp;lt;path d=&quot; M 18,3 L 46,3 L 46,40 L 61,40 L 32,68 L 3,40 L 18,40 Z &quot;&amp;gt;&amp;lt;/path&amp;gt; &amp;lt;/svg&amp;gt; &amp;lt;path&amp;gt;的d属性表示绘制顺序，它的值是一个长字符串，每个字母表示一个绘制动作，后面跟着坐标。 M：移动到（moveto） L：画直线到（lineto） Z：闭合路径 text标签 &amp;lt;text&amp;gt;标签用于绘制文本。 &amp;lt;svg width=&quot;300&quot; height=&quot;180&quot;&amp;gt; &amp;lt;text x=&quot;50&quot; y=&quot;25&quot;&amp;gt;Hello World&amp;lt;/text&amp;gt; &amp;lt;/svg&amp;gt; &amp;lt;text&amp;gt;的x属性和y属性，表示文本区块基线（baseline）起点的横坐标和纵坐标。文字的样式可以用class或style属性指定。 use标签 &amp;lt;use&amp;gt;标签用于复制一个形状。 &amp;lt;svg viewBox=&quot;0 0 30 10&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&amp;gt; &amp;lt;circle id=&quot;myCircle&quot; cx=&quot;5&quot; cy=&quot;5&quot; r=&quot;4&quot;/&amp;gt; &amp;lt;use href=&quot;#myCircle&quot; x=&quot;10&quot; y=&quot;0&quot; fill=&quot;blue&quot; /&amp;gt; &amp;lt;use href=&quot;#myCircle&quot; x=&quot;20&quot; y=&quot;0&quot; fill=&quot;white&quot; stroke=&quot;blue&quot; /&amp;gt; &amp;lt;/svg&amp;gt; &amp;lt;use&amp;gt;的href属性指定所要复制的节点，x属性和y属性是&amp;lt;use&amp;gt;左上角的坐标。另外，还可以指定width和height坐标。 g标签 &amp;lt;g&amp;gt;标签用于将多个形状组成一个组（group），方便复用。 &amp;lt;svg width=&quot;300&quot; height=&quot;100&quot;&amp;gt; &amp;lt;g id=&quot;myCircle&quot;&amp;gt; &amp;lt;text x=&quot;25&quot; y=&quot;20&quot;&amp;gt;圆形&amp;lt;/text&amp;gt; &amp;lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;20&quot;/&amp;gt; &amp;lt;/g&amp;gt; &amp;lt;use href=&quot;#myCircle&quot; x=&quot;100&quot; y=&quot;0&quot; fill=&quot;blue&quot; /&amp;gt; &amp;lt;use href=&quot;#myCircle&quot; x=&quot;200&quot; y=&quot;0&quot; fill=&quot;white&quot; stroke=&quot;blue&quot; /&amp;gt; &amp;lt;/svg&amp;gt; defs标签 &amp;lt;defs&amp;gt;标签用于自定义形状，它内部的代码不会显示，仅供引用。 &amp;lt;svg width=&quot;300&quot; height=&quot;100&quot;&amp;gt; &amp;lt;defs&amp;gt; &amp;lt;g id=&quot;myCircle&quot;&amp;gt; &amp;lt;text x=&quot;25&quot; y=&quot;20&quot;&amp;gt;圆形&amp;lt;/text&amp;gt; &amp;lt;circle cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;20&quot;/&amp;gt; &amp;lt;/g&amp;gt; &amp;lt;/defs&amp;gt; &amp;lt;use href=&quot;#myCircle&quot; x=&quot;0&quot; y=&quot;0&quot; /&amp;gt; &amp;lt;use href=&quot;#myCircle&quot; x=&quot;100&quot; y=&quot;0&quot; fill=&quot;blue&quot; /&amp;gt; &amp;lt;use href=&quot;#myCircle&quot; x=&quot;200&quot; y=&quot;0&quot; fill=&quot;white&quot; stroke=&quot;blue&quot; /&amp;gt; &amp;lt;/svg&amp;gt; pattern标签 &amp;lt;pattern&amp;gt;标签用于自定义一个形状，该形状可以被引用来平铺一个区域。 &amp;lt;svg width=&quot;500&quot; height=&quot;500&quot;&amp;gt; &amp;lt;defs&amp;gt; &amp;lt;pattern id=&quot;dots&quot; x=&quot;0&quot; y=&quot;0&quot; width=&quot;100&quot; height=&quot;100&quot; patternUnits=&quot;userSpaceOnUse&quot;&amp;gt; &amp;lt;circle fill=&quot;#bee9e8&quot; cx=&quot;50&quot; cy=&quot;50&quot; r=&quot;35&quot; /&amp;gt; &amp;lt;/pattern&amp;gt; &amp;lt;/defs&amp;gt; &amp;lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;url(#dots)&quot; /&amp;gt; &amp;lt;/svg&amp;gt; 上面代码中，&amp;lt;pattern&amp;gt;标签将一个圆形定义为dots模式。patternUnits=&quot;userSpaceOnUse&quot;表示&amp;lt;pattern&amp;gt;的宽度和长度是实际的像素值。然后，指定这个模式去填充下面的矩形。 image标签 &amp;lt;image&amp;gt;标签用于插入图片文件。 &amp;lt;svg viewBox=&quot;0 0 100 100&quot; width=&quot;100&quot; height=&quot;100&quot;&amp;gt; &amp;lt;image xlink:href=&quot;path/to/image.jpg&quot; width=&quot;50%&quot; height=&quot;50%&quot;/&amp;gt; &amp;lt;/svg&amp;gt; 上面代码中，&amp;lt;image&amp;gt;的xlink:href属性表示图像的来源。 animate标签 &amp;lt;animate&amp;gt;标签用于产生动画效果。 &amp;lt;svg width=&quot;500px&quot; height=&quot;500px&quot;&amp;gt; &amp;lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;100&quot; height=&quot;100&quot; fill=&quot;#feac5e&quot;&amp;gt; &amp;lt;animate attributeName=&quot;x&quot; from=&quot;0&quot; to=&quot;500&quot; dur=&quot;2s&quot; repeatCount=&quot;indefinite&quot; /&amp;gt; &amp;lt;/rect&amp;gt; &amp;lt;/svg&amp;gt; 上面代码中，矩形会不断移动，产生动画效果。 &amp;lt;animate&amp;gt;的属性含义如下。 attributeName：发生动画效果的属性名。 from：单次动画的初始值。 to：单次动画的结束值。 dur：单次动画的持续时间。 repeatCount：动画的循环模式。 可以在多个属性上面定义动画。 &amp;lt;animate attributeName=&quot;x&quot; from=&quot;0&quot; to=&quot;500&quot; dur=&quot;2s&quot; repeatCount=&quot;indefinite&quot; /&amp;gt; &amp;lt;animate attributeName=&quot;width&quot; to=&quot;500&quot; dur=&quot;2s&quot; repeatCount=&quot;indefinite&quot; /&amp;gt; animateTransform标签 &amp;lt;animate&amp;gt;标签对 CSS 的transform属性不起作用，如果需要变形，就要使用&amp;lt;animateTransform&amp;gt;标签。 &amp;lt;svg width=&quot;500px&quot; height=&quot;500px&quot;&amp;gt; &amp;lt;rect x=&quot;250&quot; y=&quot;250&quot; width=&quot;50&quot; height=&quot;50&quot; fill=&quot;#4bc0c8&quot;&amp;gt; &amp;lt;animateTransform attributeName=&quot;transform&quot; type=&quot;rotate&quot; begin=&quot;0s&quot; dur=&quot;10s&quot; from=&quot;0 200 200&quot; to=&quot;360 400 400&quot; repeatCount=&quot;indefinite&quot; /&amp;gt; &amp;lt;/rect&amp;gt; &amp;lt;/svg&amp;gt; 上面代码中，&amp;lt;animateTransform&amp;gt;的效果为旋转（rotate），这时from和to属性值有三个数字，第一个数字是角度值，第二个值和第三个值是旋转中心的坐标。from=&quot;0 200 200&quot;表示开始时，角度为0，围绕(200, 200)开始旋转；to=&quot;360 400 400&quot;表示结束时，角度为360，围绕(400, 400)旋转。 JavaScript 操作 DOM操作 如果 SVG 代码直接写在 HTML 网页之中，它就成为网页 DOM 的一部分，可以直接用 DOM 操作。 &amp;lt;svg id=&quot;mysvg&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 800 600&quot; preserveAspectRatio=&quot;xMidYMid meet&quot; &amp;gt; &amp;lt;circle id=&quot;mycircle&quot; cx=&quot;400&quot; cy=&quot;300&quot; r=&quot;50&quot; /&amp;gt; &amp;lt;svg&amp;gt; 上面代码插入网页之后，就可以用 CSS 定制样式。 circle { stroke-width: 5; stroke: #f00; fill: #ff0; } circle:hover { stroke: #090; fill: #fff; } 然后，可以用 JavaScript 代码操作 SVG。 const mycircle = document.getElementById('mycircle'); mycircle.addEventListener('click', function(e) { console.log('circle clicked - enlarging'); mycircle.setAttribute('r', 60); }, false); 上面代码指定，如果点击图形，就改写circle元素的r属性。 获取SVG DOM 使用&amp;lt;object&amp;gt;、&amp;lt;iframe&amp;gt;、&amp;lt;embed&amp;gt;标签插入 SVG 文件，可以获取 SVG DOM const svgObject = document.getElementById('object').contentDocument; const svgIframe = document.getElementById('iframe').contentDocument; const svgEmbed = document.getElementById('embed').getSVGDocument(); 注意，如果使用&amp;lt;img&amp;gt;标签插入 SVG 文件，就无法获取 SVG DOM。 读取 SVG 源码 由于 SVG 文件就是一段 XML 文本，因此可以通过读取 XML 代码的方式，读取 SVG 源码。 &amp;lt;div id=&quot;svg-container&quot;&amp;gt; &amp;lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; xml:space=&quot;preserve&quot; width=&quot;500&quot; height=&quot;440&quot; &amp;gt; &amp;lt;!-- svg code --&amp;gt; &amp;lt;/svg&amp;gt; &amp;lt;/div&amp;gt; 使用XMLSerializer实例的serializeToString()方法，获取 SVG 元素的代码。 const svgString = new XMLSerializer() .serializeToString(document.querySelector('svg')); SVG 图像转为 Canvas 图像 首先，需要新建一个Image对象，将 SVG 图像指定到该Image对象的src属性。 const img = new Image(); const svg = new Blob([svgString], {type: &quot;image/svg+xml;charset=utf-8&quot;}); const DOMURL = self.URL || self.webkitURL || self; const url = DOMURL.createObjectURL(svg); img.src = url; 然后，当图像加载完成后，再将它绘制到&amp;lt;canvas&amp;gt;元素。 img.onload = function () { const canvas = document.getElementById('canvas'); const ctx = canvas.getContext('2d'); ctx.drawImage(img, 0, 0); }; 实力：折线图 下面将一张数据表格画成折线图。 Date |Amount -----|------ 2014-01-01 | $10 2014-02-01 | $20 2014-03-01 | $40 2014-04-01 | $80 上面的图形，可以画成一个坐标系，Date作为横轴，Amount作为纵轴，四行数据画成一个数据点。 &amp;lt;svg width=&quot;350&quot; height=&quot;160&quot;&amp;gt; &amp;lt;g className=&quot;layer&quot; transform=&quot;translate(60,10)&quot;&amp;gt; &amp;lt;circle r=&quot;5&quot; cx=&quot;0&quot; cy=&quot;105&quot; /&amp;gt; &amp;lt;circle r=&quot;5&quot; cx=&quot;90&quot; cy=&quot;90&quot; /&amp;gt; &amp;lt;circle r=&quot;5&quot; cx=&quot;180&quot; cy=&quot;60&quot; /&amp;gt; &amp;lt;circle r=&quot;5&quot; cx=&quot;270&quot; cy=&quot;0&quot; /&amp;gt; &amp;lt;polyline points=&quot;0,105 90,90 180,60 270,0&quot; fill=&quot;none&quot; stroke=&quot;black&quot; strokeWidth=&quot;1&quot; /&amp;gt; &amp;lt;g className=&quot;y axis&quot;&amp;gt; &amp;lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;0&quot; y2=&quot;120&quot; style= /&amp;gt; &amp;lt;text x=&quot;-40&quot; y=&quot;105&quot; dy=&quot;5&quot;&amp;gt; $10 &amp;lt;/text&amp;gt; &amp;lt;text x=&quot;-40&quot; y=&quot;0&quot; dy=&quot;5&quot;&amp;gt; $80 &amp;lt;/text&amp;gt; &amp;lt;/g&amp;gt; &amp;lt;g className=&quot;x axis&quot; transform=&quot;translate(0, 120)&quot;&amp;gt; &amp;lt;line x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;270&quot; y2=&quot;0&quot; style= /&amp;gt; &amp;lt;text x=&quot;-30&quot; y=&quot;20&quot;&amp;gt; January 2014 &amp;lt;/text&amp;gt; &amp;lt;text x=&quot;240&quot; y=&quot;20&quot;&amp;gt; April &amp;lt;/text&amp;gt; &amp;lt;/g&amp;gt; &amp;lt;/g&amp;gt; &amp;lt;/svg&amp;gt;</summary></entry><entry><title type="html">2021-11 复习</title><link href="http://localhost:4000/2021/11/09/review.html" rel="alternate" type="text/html" title="2021-11 复习" /><published>2021-11-09T00:00:00+08:00</published><updated>2021-11-09T00:00:00+08:00</updated><id>http://localhost:4000/2021/11/09/review</id><content type="html" xml:base="http://localhost:4000/2021/11/09/review.html">&lt;h3 id=&quot;1-交换两个变量的值&quot;&gt;1. 交换两个变量的值&lt;/h3&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;不借助第三方变量 和 ES6 的解构&lt;/p&gt;
