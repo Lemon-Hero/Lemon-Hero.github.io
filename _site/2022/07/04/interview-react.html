@@ -1,11 +1,10 @@
 <!DOCTYPE html><html lang="zh">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>主页 - LiMeng Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>2022-面试题-React - LiMeng Blog</title>
 
-<meta name="description" content="This is Li Meng's personal blog
-">
-<link rel="canonical" href="http://localhost:4000/"><link rel="alternate" type="application/rss+xml" title="LiMeng Blog" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
+<meta name="description" content="ReactReact是什么React，用于构建用户界面的 JavaScript 库，只提供了 UI 层面的解决方案遵循组件设计模式、声明式编程范式和函数式编程概念，以使前端应用程序更高效使用虚拟 DOM 来有效地操作 DOM，遵循从高阶组件到低阶组件的单向数据流帮助我们将界面分成了各个独立的小块，每一个块就是组件...">
+<link rel="canonical" href="http://localhost:4000/2022/07/04/interview-react.html"><link rel="alternate" type="application/rss+xml" title="LiMeng Blog" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
 
@@ -255,308 +254,373 @@
 </head>
   <body>
     <div class="root" data-is-touch="false">
-      <div class="layout--page js-page-root">
-<div class="page__main js-page-main page__viewport cell cell--auto">
+      <div class="layout--page js-page-root"><div class="page__main js-page-main page__viewport has-aside cell cell--auto">
 
-      <div class="page__main-inner">
-<div class="page__header d-print-none">
-<header class="header"><div class="main">
+      <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
-        <div class="header__brand">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewbox="0 0 24 24">
+        <div class="header__brand"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="24px" height="24px" viewBox="0 0 24 24">
 <style type="text/css">
 	.st0{fill:#515151;}
 </style>
 <path class="st0" d="M1.7,22.3c5.7-5.7,11.3-5.7,17,0c3.3-3.3,3.5-5.3,0.8-6c2.7,0.7,3.5-1.1,2.3-5.6s-3.3-5.2-6.3-2.1
-	c3-3,2.3-5.2-2.1-6.3S7,1.8,7.7,4.6C7,1.8,5,2.1,1.7,5.3C7.3,11,7.3,16.7,1.7,22.3"></path>
+	c3-3,2.3-5.2-2.1-6.3S7,1.8,7.7,4.6C7,1.8,5,2.1,1.7,5.3C7.3,11,7.3,16.7,1.7,22.3"/>
 </svg>
 <a title="This is Li Meng's personal blog
-" href="/">LiMeng Blog</a>
-</div>
-<button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button>
-</div>
-<nav class="navigation">
-        <ul>
-<li class="navigation__item"><a href="/archive.html">归档</a></li>
-<li class="navigation__item"><a href="/about.html">关于</a></li>
-<li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li>
-</ul>
-      </nav>
-</div>
+" href="/">LiMeng Blog</a></div><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></div><nav class="navigation">
+        <ul><li class="navigation__item"><a href="/archive.html">归档</a></li><li class="navigation__item"><a href="/about.html">关于</a></li><li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li></ul>
+      </nav></div>
   </header>
-</div>
-<div class="page__content"><div class="main"><div class="grid grid--reverse">
+</div><div class="page__content"><div class ="main"><div class="grid grid--reverse">
 
-              <div class="col-aside d-print-none js-col-aside"></div>
+              <div class="col-aside d-print-none js-col-aside"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div>
+</aside></div>
 
-              <div class="col-main cell cell--auto">
-<!-- start custom main top snippet -->
+              <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/WebPage"><header style="display:none;"><h1>主页</h1></header><meta itemprop="headline" content="主页">
-<meta itemprop="author" content="LiMeng">
-<div class="js-article-content">
-<div class="layout--articles">
-<div class="article-list items items--divided">
-<article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/2022/07/04/interview-react.html"><h2 itemprop="headline" class="item__header">2022-面试题-React</h2></a></header>
-          <div class="item__description">
-<div class="article__content" itemprop="description articleBody">React
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>2022-面试题-React</h1></header><span class="split-space">&nbsp;</span>
+          <a class="edit-on-github"
+            title="在 Github 上修改"
+            href="https://github.com/Lemon-Hero/Lemon-Hero.github.io/tree/master/_posts/2022-07-04-interview-react.md">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="2022-面试题-React"><div class="article__info clearfix"><ul class="left-col menu"><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=%E9%9D%A2%E8%AF%95%E9%A2%98">面试题</a>
+            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>2022年 07月04日</span>
+            </li><li><i class="far fa-eye"></i> <span class="js-pageview" data-page-key="20211119_lemon_blog">0</span> 阅读</li></ul></div><meta itemprop="author" content="LiMeng"/><meta itemprop="datePublished" content="2022-07-04T00:00:00+08:00">
+    <meta itemprop="keywords" content="面试题"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
 
-React是什么
+<!-- end custom article top snippet -->
+<div class="article__content" itemprop="articleBody"><h1 id="react">React</h1>
 
-React，用于构建用户界面的 JavaScript 库，只提供了 UI 层面的解决方案
+<h2 id="react是什么">React是什么</h2>
 
-遵循组件设计模式、声明式编程范式和函数式编程概念，以使前端应用程序更高效
+<p>React，用于构建用户界面的 JavaScript 库，只提供了 UI 层面的解决方案</p>
 
-使用虚拟 DOM 来有效地操作 DOM，遵循从高阶组件到低阶组件的单向数据流
+<p>遵循组件设计模式、声明式编程范式和函数式编程概念，以使前端应用程序更高效</p>
 
-帮助我们将界面分成了各个独立的小块，每一个块就是组件，这些组件之间可以组合、嵌套，构成整体的页面
+<p>使用虚拟 DOM 来有效地操作 DOM，遵循从高阶组件到低阶组件的单向数据流</p>
 
-React 特性有很多，如：
+<p>帮助我们将界面分成了各个独立的小块，每一个块就是组件，这些组件之间可以组合、嵌套，构成整体的页面</p>
 
+<p><strong>React 特性有很多，如：</strong></p>
 
-  JSX 语法
-  单向数据绑定
-  虚拟 DOM
-  声明式编程
-  Component组件
-
-
-Component组件该有的特点：
-
-
-  可组合：每个组件易于和其它组件一起使用，或者嵌套在另一个组件内部
-  可重用：每个组件都是具有独立功能的，它可以被使用在多个 UI ...</div>
-<p><a href="/2022/07/04/interview-react.html">阅读更多</a></p>
-</div>
-<div class="article__info clearfix">
-<ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm" href="/archive.html?tag=%E9%9D%A2%E8%AF%95%E9%A2%98">面试题</a>
-            </li></ul>
-<ul class="right-col menu">
-<li>
-<i class="far fa-calendar-alt"></i> <span>2022年 07月04日</span>
-            </li>
-<li>
-<i class="far fa-eye"></i> <span class="js-pageview" data-page-key="20211119_lemon_blog">0</span> 阅读</li>
+<ul>
+  <li>JSX 语法</li>
+  <li>单向数据绑定</li>
+  <li>虚拟 DOM</li>
+  <li>声明式编程</li>
+  <li>Component组件</li>
 </ul>
-</div>
-<meta itemprop="author" content="LiMeng">
-<meta itemprop="datePublished" content="2022-07-04T00:00:00+08:00">
-    <meta itemprop="keywords" content="面试题">
-</div>
-      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/2022/07/04/interview-js.html"><h2 itemprop="headline" class="item__header">Interview Js</h2></a></header>
-          <div class="item__description">
-<div class="article__content" itemprop="description articleBody"></div>
-<p><a href="/2022/07/04/interview-js.html">阅读更多</a></p>
-</div>
-<div class="article__info clearfix"><ul class="right-col menu">
-<li>
-<i class="far fa-calendar-alt"></i> <span>2022年 07月04日</span>
-            </li>
-<li>
-<i class="far fa-eye"></i> <span class="js-pageview" data-page-key="">0</span> 阅读</li>
-</ul></div>
-<meta itemprop="author" content="LiMeng">
-<meta itemprop="datePublished" content="2022-07-04T00:00:00+08:00">
-</div>
-      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/2021/11/19/visualization.html"><h2 itemprop="headline" class="item__header">2021-SVG学习</h2></a></header>
-          <div class="item__description">
-<div class="article__content" itemprop="description articleBody">SVG
 
-概述
+<p><strong>Component组件该有的特点：</strong></p>
 
-SVG 是一种基于 XML 语法的图像格式，全称是可缩放矢量图（Scalable Vector Graphics）。其他图像格式都是基于像素的，SVG 则是属于对图像的数学描述，所以它本质上是文本文件，体积较小，且不管放大多少倍都不会失真。
-
-SVG 文件可以直接插入网页，成为 DOM 的一部分，然后用 JavaScript 和 CSS 进行操作。
-
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;&lt;/head&gt;
-&lt;body&gt;
-&lt;svg
-  id="mysvg"
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 800 600"
-  pre...</div>
-<p><a href="/2021/11/19/visualization.html">阅读更多</a></p>
-</div>
-<div class="article__info clearfix">
-<ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm" href="/archive.html?tag=%E5%8F%AF%E8%A7%86%E5%8C%96">可视化</a>
-            </li></ul>
-<ul class="right-col menu">
-<li>
-<i class="far fa-calendar-alt"></i> <span>2021年 11月19日</span>
-            </li>
-<li>
-<i class="far fa-eye"></i> <span class="js-pageview" data-page-key="20211119_lemon_blog">0</span> 阅读</li>
+<ul>
+  <li>可组合：每个组件易于和其它组件一起使用，或者嵌套在另一个组件内部</li>
+  <li>可重用：每个组件都是具有独立功能的，它可以被使用在多个 UI 场景</li>
+  <li>可维护：每个小的组件仅仅包含自身的逻辑，更容易被理解和维护</li>
 </ul>
-</div>
-<meta itemprop="author" content="LiMeng">
-<meta itemprop="datePublished" content="2021-11-19T00:00:00+08:00">
-    <meta itemprop="keywords" content="可视化">
-</div>
-      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/2021/11/09/review.html"><h2 itemprop="headline" class="item__header">2021-11 复习</h2></a></header>
-          <div class="item__description">
-<div class="article__content" itemprop="description articleBody">1. 交换两个变量的值
 
+<p><strong>React 存在的优势：</strong></p>
 
-  不借助第三方变量 和 ES6 的解构
-
-
-代码题如下：
-
-let a = 1;
-let b = 2;
-// 面试者操作
-// ...
-console.log(a); // 2
-console.log(b); // 1
-
-
-题解1：
-
-let a = 1;
-let b = 2;
-
-a = [b, (b = a)][0];
-
-console.log(a); // 2
-console.log(b); // 1
-
-
-题解2：
-
-let a = 1;
-let b = 2;
-
-a = a + b;
-b = a - b;
-a = a - b;
-
-console.log(a); // 2
-console.log(b); // 1
-
-
-2. 什么是柯里化?
-
-
-    柯...</div>
-<p><a href="/2021/11/09/review.html">阅读更多</a></p>
-</div>
-<div class="article__info clearfix">
-<ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm" href="/archive.html?tag=%E5%A4%8D%E4%B9%A0">复习</a>
-            </li></ul>
-<ul class="right-col menu">
-<li>
-<i class="far fa-calendar-alt"></i> <span>2021年 11月09日</span>
-            </li>
-<li>
-<i class="far fa-eye"></i> <span class="js-pageview" data-page-key="20211109_lemon_blog">0</span> 阅读</li>
+<ul>
+  <li>高效灵活</li>
+  <li>声明式的设计，简单使用</li>
+  <li>组件式开发，提高代码复用率</li>
+  <li>单向响应的数据流会比双向绑定的更安全，速度更快</li>
 </ul>
-</div>
-<meta itemprop="author" content="LiMeng">
-<meta itemprop="datePublished" content="2021-11-09T00:00:00+08:00">
-    <meta itemprop="keywords" content="复习">
-</div>
-      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/2018/07/01/welcome.html"><h2 itemprop="headline" class="item__header">Welcome text</h2></a></header>
-          <div class="item__description">
-<div class="article__content" itemprop="description articleBody">If you see this page, that means you have setup your site. enjoy! <img class="emoji" title=":ghost:" alt=":ghost:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f47b.png" height="20" width="20"> <img class="emoji" title=":ghost:" alt=":ghost:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f47b.png" height="20" width="20"> <img class="emoji" title=":ghost:" alt=":ghost:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f47b.png" height="20" width="20">
 
-You may want to config the site or writing a post next. Please feel free to create an issue or send me email if you have any questions this is a question. you may need study this task.</div>
-<p><a href="/2018/07/01/welcome.html">阅读更多</a></p>
-</div>
-<div class="article__info clearfix">
-<ul class="left-col menu">
-<li>
-              <a class="button button--secondary button--pill button--sm" href="/archive.html?tag=TeXt">TeXt</a>
-            </li>
-<li>
-              <a class="button button--secondary button--pill button--sm" href="/archive.html?tag=%E6%B5%8B%E8%AF%95%E6%98%BE%E7%A4%BA%E6%98%AF%E5%90%A6%E6%AD%A3%E7%A1%AE">测试显示是否正确</a>
-            </li>
-</ul>
-<ul class="right-col menu">
-<li>
-<i class="far fa-calendar-alt"></i> <span>2018年 07月01日</span>
-            </li>
-<li>
-<i class="far fa-eye"></i> <span class="js-pageview" data-page-key="">0</span> 阅读</li>
-</ul>
-</div>
-<meta itemprop="author" content="LiMeng">
-<meta itemprop="datePublished" content="2018-07-01T00:00:00+08:00">
-    <meta itemprop="keywords" content="TeXt,测试显示是否正确">
-</div>
-      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/2018/06/01/header-image.html"><h2 itemprop="headline" class="item__header">Post with Header Image</h2></a></header>
-          <div class="item__description">
-<div class="article__content" itemprop="description articleBody">A Post with Header Image, See Page layout for more examples.</div>
-<p><a href="/2018/06/01/header-image.html">阅读更多</a></p>
-</div>
-<div class="article__info clearfix">
-<ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm" href="/archive.html?tag=TeXt">TeXt</a>
-            </li></ul>
-<ul class="right-col menu">
-<li>
-<i class="far fa-calendar-alt"></i> <span>2018年 06月01日</span>
-            </li>
-<li>
-<i class="far fa-eye"></i> <span class="js-pageview" data-page-key="">0</span> 阅读</li>
-</ul>
-</div>
-<meta itemprop="author" content="LiMeng">
-<meta itemprop="datePublished" content="2018-06-01T00:00:00+08:00">
-    <meta itemprop="keywords" content="TeXt">
-</div>
-      </article>
-</div>
-</div>
-<div class="layout--home"></div>
-<script>/*(function () {
+<h2 id="real-dom-和-virtual-dom-的区别优缺点">Real DOM 和 Virtual DOM 的区别？优缺点？</h2>
 
-})();*/
+<p><strong>区别：</strong></p>
+
+<ul>
+  <li>虚拟 DOM 不会进行排版与重绘操作，而真实 DOM 会频繁重排与重绘</li>
+  <li>虚拟 DOM 的总损耗是“虚拟 DOM 增删改+真实 DOM 差异增删改+排版与重绘”</li>
+  <li>真实 DOM 的总损耗是“真实 DOM 完全增删改+排版与重绘”</li>
+</ul>
+
+<p><strong>举例：</strong></p>
+
+<p>传统的原生 api 或 jQuery 去操作 DOM 时，浏览器会从构建 DOM 树开始从头到尾执行一遍流程</p>
+
+<p>当你在一次操作时，需要更新 10 个 DOM 节点，浏览器没这么智能，收到第一个更新 DOM 请求后，并不知道后续还有 9 次更新操作，因此会马上执行流程，最终执行 10 次流程</p>
+
+<p>而通过 Virtual Node，同样更新 10 个 DOM 节点，虚拟 DOM 不会立即操作 Real DOM，而是将这 10 次更新的 diff 内容保存到本地的一个 js 对象中，最终将这个 js 对象一次性 attach 到 DOM 树上，避免大量的无谓计算</p>
+
+<p><strong>真实 DOM 的优势：</strong></p>
+
+<ul>
+  <li>易用</li>
+</ul>
+
+<p><strong>缺点：</strong></p>
+
+<ul>
+  <li>效率低，解析速度慢，内存占用量过高</li>
+  <li>性能差：频繁操作真实 DOM，易于导致重绘与回流</li>
+</ul>
+
+<p><strong>使用虚拟 DOM 的优势如下：</strong></p>
+
+<ul>
+  <li>
+    <p>简单方便：如果使用手动操作真实 DOM 来完成页面，繁琐又容易出错，在大规模应用下维护起来也很困难</p>
+  </li>
+  <li>
+    <p>性能方面：使用 Virtual DOM，能够有效避免真实 DOM 数频繁更新，减少多次引起重绘与回流，提高性能</p>
+  </li>
+  <li>
+    <p>跨平台：React 借助虚拟 DOM，带来了跨平台的能力，一套代码多端运行</p>
+  </li>
+</ul>
+
+<p><strong>缺点：</strong></p>
+
+<ul>
+  <li>在一些性能要求极高的应用中虚拟 DOM 无法进行针对性的极致优化</li>
+  <li>首次渲染大量 DOM 时，由于多了一层虚拟 DOM 的计算，速度比正常稍慢</li>
+</ul>
+
+<h2 id="state-和-props-有什么区别">state 和 props 有什么区别？</h2>
+
+<p><strong>相同点：</strong></p>
+
+<ul>
+  <li>两者都是 JavaScript 对象</li>
+  <li>两者都是用于保存信息</li>
+  <li>props 和 state 都能触发渲染更新</li>
+</ul>
+
+<p><strong>区别：</strong></p>
+
+<ul>
+  <li>props 是外部传递给组件的，而 state 是在组件内被组件自己管理的。</li>
+  <li>props 在组件内部是不可修改的，但 state 在组件内部可以进行修改</li>
+  <li>state 是多变的、可以修改</li>
+</ul>
+
+<h2 id="react中的setstate执行机制">React中的setState执行机制</h2>
+
+<p>一个组件的显示形态可以由数据状态和外部参数所决定，而数据状态就是state</p>
+
+<p>当需要修改里面的值的状态需要通过调用setState来改变，从而达到更新组件内部数据的作用</p>
+
+<p>在使用setState更新数据的时候，setState的更新类型分成：</p>
+
+<ul>
+  <li>在组件生命周期或React合成事件中，setState是异步</li>
+  <li>在setTimeout或者原生dom事件中，setState是同步</li>
+</ul>
+
+<p>对同一个值进行多次 setState， setState 的批量更新策略会对其进行覆盖，取最后一次的执行结果。</p>
+
+<p>由于后面的数据会覆盖前面的更改，所以最终只执行了一次</p>
+
+<p>如果是下一个state依赖前一个state的话，推荐给setState一个参数传入一个function</p>
+
+<p>而在setTimeout或者原生dom事件中，由于是同步的操作，所以并不会进行覆盖现象</p>
+
+<h2 id="react的事件机制">React的事件机制</h2>
+
+<p><strong>React事件机制总结如下：</strong></p>
+
+<ul>
+  <li>React 基于浏览器的事件机制自身实现了一套事件机制，在 React 中这套事件机制被称之为合成事件。</li>
+  <li>React 上注册的事件最终会绑定在document这个 DOM 上，而不是 React 组件对应的 DOM(减少内存开销就是因为所有的事件都绑定在 document 上，其他节点没有绑定事件)</li>
+  <li>React 自身实现了一套事件冒泡机制，所以这也就是为什么我们 event.stopPropagation()无效的原因。</li>
+  <li>React 通过队列的形式，从触发的组件向父组件回溯，然后调用他们 JSX 中定义的 callback</li>
+</ul>
+
+<p><strong>所以想要阻止不同时间段的冒泡行为，对应使用不同的方法，对应如下：</strong></p>
+
+<ul>
+  <li>
+    <p>阻止合成事件间的冒泡，用e.stopPropagation()</p>
+  </li>
+  <li>
+    <p>阻止合成事件与最外层 document 上的事件间的冒泡，用e.nativeEvent.stopImmediatePropagation()</p>
+  </li>
+  <li>
+    <p>阻止合成事件与除最外层document上的原生事件上的冒泡，通过判断e.target来避免</p>
+  </li>
+</ul>
+
+<h2 id="react构建组件的方式有哪些区别">React构建组件的方式有哪些？区别？</h2>
+
+<p>组件就是把图形、非图形的各种逻辑均抽象为一个统一的概念（组件）来实现开发的模式</p>
+
+<p>在React中，一个类、一个函数都可以视为一个组件</p>
+
+<p><strong>组件的优势：</strong></p>
+
+<ul>
+  <li>降低整个系统的耦合度，在保持接口不变的情况下，我们可以替换不同的组件快速完成需求，例如输入框，可以替换为日历、时间、范围等组件作具体的实现</li>
+  <li>调试方便，由于整个系统是通过组件组合起来的，在出现问题的时候，可以用排除法直接移除组件，或者根据报错的组件快速定位问题，之所以能够快速定位，是因为每个组件之间低耦合，职责单一，所以逻辑会比分析整个系统要简单</li>
+  <li>提高可维护性，由于每个组件的职责单一，并且组件在系统中是被复用的，所以对代码进行优化可获得系统的整体升级</li>
+</ul>
+
+<p><strong>在React目前来讲，组件的创建主要分成了三种方式：</strong></p>
+
+<ul>
+  <li>函数式创建</li>
+  <li>通过 React.createClass 方法创建</li>
+  <li>继承 React.Component 创建</li>
+</ul>
+
+<p><strong>区别：</strong></p>
+
+<p>由于React.createClass创建的方式过于冗杂，并不建议使用</p>
+
+<p>而像函数式创建和类组件创建的区别主要在于需要创建的组件是否需要为有状态组件：</p>
+
+<ul>
+  <li>
+    <p>对于一些无状态的组件创建，建议使用函数式创建的方式</p>
+  </li>
+  <li>
+    <p>由于react hooks的出现，函数式组件创建的组件通过使用hooks方法也能使之成为有状态组件，再加上目前推崇函数式编程，所以这里建议都使用函数式的方式来创建组件</p>
+  </li>
+</ul>
+
+<p>在考虑组件的选择原则上，能用无状态组件则用无状态组件</p>
+
+<h2 id="react中的key有什么作用">React中的key有什么作用？</h2>
+
+<p>跟Vue一样，React 也存在 Diff算法，而元素key属性的作用是用于判断元素是新创建的还是被移动的元素，从而减少不必要的元素渲染</p>
+
+<p>因此key的值需要为每一个元素赋予一个确定的标识</p>
+
+<p>并不是拥有key值代表性能越高，如果说只是文本内容改变了，不写key反而性能和效率更高</p>
+
+<p>主要是因为不写key是将所有的文本内容替换一下，节点不会发生变化</p>
+
+<p>而写key则涉及到了节点的增和删，发现旧key不存在了，则将其删除，新key在之前没有，则插入，这就增加性能的开销</p>
+
+<p><strong>良好使用key属性是性能优化的非常关键的一步，注意事项为：</strong></p>
+
+<ul>
+  <li>
+    <p>key 应该是唯一的</p>
+  </li>
+  <li>
+    <p>key不要使用随机值（随机数在下一次 render 时，会重新生成一个数字）</p>
+  </li>
+  <li>
+    <p>使用 index 作为 key值，对性能没有优化</p>
+  </li>
+</ul>
+
+<h2 id="react-refs-的理解应用场景">React refs 的理解？应用场景？</h2>
+
+<p>React 中的 Refs 提供了一种方式，允许我们访问 DOM 节点或在 render 方法中创建的 React 元素</p>
+
+<p>本质为ReactDOM.render()返回的组件实例，如果是渲染组件则返回的是组件实例，如果渲染dom则返回的是具体的dom节点</p>
+
+<p><strong>应用场景：</strong></p>
+
+<ul>
+  <li>对Dom元素的焦点控制、内容选择、控制</li>
+  <li>对Dom元素的内容设置及媒体播放</li>
+  <li>对Dom元素的操作和对组件实例的操作</li>
+  <li>集成第三方 DOM 库</li>
+</ul>
+
+<h2 id="类组件和函数组件的区别">类组件和函数组件的区别？</h2>
+
+<ul>
+  <li>
+    <p>编写形式</p>
+  </li>
+  <li>
+    <p>状态管理</p>
+  </li>
+  <li>
+    <p>生命周期</p>
+  </li>
+  <li>
+    <p>调用方式</p>
+  </li>
+</ul>
+
+<h2 id="spa首屏加载速度慢的问题">SPA首屏加载速度慢的问题</h2>
+
+<p><strong>常见的几种SPA首屏优化方式：</strong></p>
+
+<ul>
+  <li>减小入口文件积</li>
+  <li>静态资源本地缓存</li>
+  <li>UI框架按需加载</li>
+  <li>图片资源的压缩</li>
+  <li>组件重复打包</li>
+  <li>开启GZip压缩</li>
+  <li>使用SSR</li>
+</ul>
+
+<h1 id="redux">Redux</h1>
+
+<h1 id="react-native">React Native</h1>
+</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2022-07-04T00:00:00+08:00"><!-- start custom article footer snippet -->
+
+<!-- end custom article footer snippet -->
+<div class="article__subscribe"><div class="subscribe"><i class="fas fa-rss"></i> <a type="application/rss+xml" href="/feed.xml">订阅</a></div>
+</div><div class="article__license"><div class="license">
+    <p>本文遵守 <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Attribution-NonCommercial 4.0 International</a> 许可协议。
+      <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">
+        <img alt="Attribution-NonCommercial 4.0 International" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+      </a>
+    </p>
+  </div></div></footer>
+<div class="article__section-navigator clearfix"><div class="previous"><span>上篇</span><a href="/2022/07/04/interview-js.html">Interview Js</a></div></div></div>
+
+</div>
+
+<script>(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    $(function() {
+      var $this ,$scroll;
+      var $articleContent = $('.js-article-content');
+      var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+      var scroll = hasSidebar ? '.js-page-main' : 'html, body';
+      $scroll = $(scroll);
+
+      $articleContent.find('.highlight').each(function() {
+        $this = $(this);
+        $this.attr('data-lang', $this.find('code').attr('data-lang'));
+      });
+      $articleContent.find('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]').each(function() {
+        $this = $(this);
+        $this.append($('<a class="anchor d-print-none" aria-hidden="true"></a>').html('<i class="fas fa-anchor"></i>'));
+      });
+      $articleContent.on('click', '.anchor', function() {
+        $scroll.scrollToAnchor('#' + $(this).parent().attr('id'), 400);
+      });
+    });
+  });
+})();
 </script>
-
-
-
-</div>
-<section class="page__comments d-print-none"></section></article><!-- start custom main bottom snippet -->
+</div><section class="page__comments d-print-none"></section></article><!-- start custom main bottom snippet -->
 
 <!-- end custom main bottom snippet -->
 </div>
-            </div></div></div>
-<div class="page__footer d-print-none">
+            </div></div></div><div class="page__footer d-print-none">
 <footer class="footer py-4 js-page-footer">
-  <div class="main">
-<div itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LiMeng">
-<meta itemprop="url" content="/">
-<meta itemprop="description" content="Thousand mile code that loves to learn.">
-<div class="footer__author-links">
-<div class="author-links">
+  <div class="main"><div itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LiMeng"><meta itemprop="url" content="/"><meta itemprop="description" content="Thousand mile code that loves to learn."><div class="footer__author-links"><div class="author-links">
   <ul class="menu menu--nowrap menu--inline"></ul>
 </div>
 </div>
-    </div>
-<div class="site-info mt-2">
+    </div><div class="site-info mt-2">
       <div>© LiMeng Blog 2021,
-        Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> &amp; <a title="TeXt is a super customizable Jekyll theme." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
+        Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
+        title="TeXt is a super customizable Jekyll theme." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
       </div>
     </div>
   </div>
 </footer>
-</div>
-</div>
-    </div>
-<script>(function() {
+</div></div>
+    </div><script>(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
     var $body = $('body'), $window = $(window);
@@ -620,8 +684,7 @@ You may want to config the site or writing a post next. Please feel free to crea
     $.fn.modal = modal;
   });
 })();
-</script><div class="modal modal--overflow page__search-modal d-print-none js-page-search-modal">
-<script>
+</script><div class="modal modal--overflow page__search-modal d-print-none js-page-search-modal"><script>
 (function () {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
@@ -713,7 +776,7 @@ You may want to config the site or writing a post next. Please feel free to crea
     <div class="search-bar">
       <div class="search-box js-search-box">
         <div class="search-box__icon-search"><i class="fas fa-search"></i></div>
-        <input type="text">
+        <input type="text" />
         <div class="search-box__icon-clear js-icon-clear">
           <a><i class="fas fa-times"></i></a>
         </div>
@@ -837,8 +900,7 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   });
 });
 </script>
-</div>
-</div>
+</div></div>
 
 
 <script>(function() {
@@ -1075,6 +1137,68 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
 /*(function () {
 
 })();*/
+</script><script>
+  /* toc must before affix, since affix need to konw toc' height. */(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  var TOC_SELECTOR = window.TEXT_VARIABLES.site.toc.selectors;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $window = $(window);
+    var $articleContent = $('.js-article-content');
+    var $tocRoot = $('.js-toc-root'), $col2 = $('.js-col-aside');
+    var toc;
+    var tocDisabled = false;
+    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+    var hasToc = $articleContent.find(TOC_SELECTOR).length > 0;
+
+    function disabled() {
+      return $col2.css('display') === 'none' || !hasToc;
+    }
+
+    tocDisabled = disabled();
+
+    toc = $tocRoot.toc({
+      selectors: TOC_SELECTOR,
+      container: $articleContent,
+      scrollTarget: hasSidebar ? '.js-page-main' : null,
+      scroller: hasSidebar ? '.js-page-main' : null,
+      disabled: tocDisabled
+    });
+
+    $window.on('resize', window.throttle(function() {
+      tocDisabled = disabled();
+      toc && toc.setOptions({
+        disabled: tocDisabled
+      });
+    }, 100));
+
+  });
+})();
+(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $window = $(window), $pageFooter = $('.js-page-footer');
+    var $pageAside = $('.js-page-aside');
+    var affix;
+    var tocDisabled = false;
+    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+
+    affix = $pageAside.affix({
+      offsetBottom: $pageFooter.outerHeight(),
+      scrollTarget: hasSidebar ? '.js-page-main' : null,
+      scroller: hasSidebar ? '.js-page-main' : null,
+      scroll: hasSidebar ? $('.js-page-main').children() : null,
+      disabled: tocDisabled
+    });
+
+    $window.on('resize', window.throttle(function() {
+      affix && affix.setOptions({
+        disabled: tocDisabled
+      });
+    }, 100));
+
+    window.pageAsideAffix = affix;
+  });
+})();
 </script><script>
   window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js'], function() {
     var $canvas = null, $this = null, _ctx = null, _text = '';
