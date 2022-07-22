@@ -1,5 +1,68 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh" /><updated>2022-07-20T23:01:17+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">LiMeng Blog</title><subtitle>This is Li Meng's personal blog
-</subtitle><author><name>LiMeng</name></author><entry><title type="html">Interview Js</title><link href="http://localhost:4000/2022/07/04/interview-js.html" rel="alternate" type="text/html" title="Interview Js" /><published>2022-07-04T00:00:00+08:00</published><updated>2022-07-04T00:00:00+08:00</updated><id>http://localhost:4000/2022/07/04/interview-js</id><content type="html" xml:base="http://localhost:4000/2022/07/04/interview-js.html"></content><author><name>LiMeng</name></author><summary type="html"></summary></entry><entry><title type="html">2022-面试题-React</title><link href="http://localhost:4000/2022/07/04/interview-react.html" rel="alternate" type="text/html" title="2022-面试题-React" /><published>2022-07-04T00:00:00+08:00</published><updated>2022-07-04T00:00:00+08:00</updated><id>http://localhost:4000/2022/07/04/interview-react</id><content type="html" xml:base="http://localhost:4000/2022/07/04/interview-react.html">&lt;h1 id=&quot;react&quot;&gt;React&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh"><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="zh" /><updated>2022-07-22T01:13:08+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">LiMeng Blog</title><subtitle>This is Li Meng's personal blog
+</subtitle><author><name>LiMeng</name></author><entry><title type="html">2022-面试题-HTTP</title><link href="http://localhost:4000/2022/07/22/interview-http.html" rel="alternate" type="text/html" title="2022-面试题-HTTP" /><published>2022-07-22T00:00:00+08:00</published><updated>2022-07-22T00:00:00+08:00</updated><id>http://localhost:4000/2022/07/22/interview-http</id><content type="html" xml:base="http://localhost:4000/2022/07/22/interview-http.html"></content><author><name>LiMeng</name></author><category term="面试题" /><summary type="html"></summary></entry><entry><title type="html">2022-面试题-ES6</title><link href="http://localhost:4000/2022/07/22/interview-ES6.html" rel="alternate" type="text/html" title="2022-面试题-ES6" /><published>2022-07-22T00:00:00+08:00</published><updated>2022-07-22T00:00:00+08:00</updated><id>http://localhost:4000/2022/07/22/interview-ES6</id><content type="html" xml:base="http://localhost:4000/2022/07/22/interview-ES6.html"></content><author><name>LiMeng</name></author><category term="面试题" /><summary type="html"></summary></entry><entry><title type="html">2022-面试题-Webpack</title><link href="http://localhost:4000/2022/07/22/interview-webpack.html" rel="alternate" type="text/html" title="2022-面试题-Webpack" /><published>2022-07-22T00:00:00+08:00</published><updated>2022-07-22T00:00:00+08:00</updated><id>http://localhost:4000/2022/07/22/interview-webpack</id><content type="html" xml:base="http://localhost:4000/2022/07/22/interview-webpack.html"></content><author><name>LiMeng</name></author><category term="面试题" /><summary type="html"></summary></entry><entry><title type="html">2022-面试题-JavaScript</title><link href="http://localhost:4000/2022/07/21/interview-js.html" rel="alternate" type="text/html" title="2022-面试题-JavaScript" /><published>2022-07-21T00:00:00+08:00</published><updated>2022-07-21T00:00:00+08:00</updated><id>http://localhost:4000/2022/07/21/interview-js</id><content type="html" xml:base="http://localhost:4000/2022/07/21/interview-js.html">&lt;h2 id=&quot;防抖与节流&quot;&gt;防抖与节流&lt;/h2&gt;
+
+&lt;p&gt;函数防抖：在事件被触发n秒后再执行回调，如果在这n秒内又被触发，则重新计时。&lt;/p&gt;
+
+&lt;p&gt;例：在用户输入信息，请求接口时&lt;/p&gt;
+
+&lt;p&gt;函数节流：规定在一个单位时间内，只能触发一次函数。如果这个单位时间内触发多次函数，只有一次生效。&lt;/p&gt;
+
+&lt;p&gt;例：在页面下拉加载时&lt;/p&gt;
+
+&lt;h2 id=&quot;数据类型&quot;&gt;数据类型&lt;/h2&gt;
+
+&lt;p&gt;在&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JavaScript&lt;/code&gt;中，我们可以分成两种类型：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;基本数据类型
+    &lt;ul&gt;
+      &lt;li&gt;Number&lt;/li&gt;
+      &lt;li&gt;String&lt;/li&gt;
+      &lt;li&gt;Boolean&lt;/li&gt;
+      &lt;li&gt;Null&lt;/li&gt;
+      &lt;li&gt;Undefined&lt;/li&gt;
+      &lt;li&gt;Symbol&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;引用数据类型
+    &lt;ul&gt;
+      &lt;li&gt;Object&lt;/li&gt;
+      &lt;li&gt;Array&lt;/li&gt;
+      &lt;li&gt;Function&lt;/li&gt;
+      &lt;li&gt;Date&lt;/li&gt;
+      &lt;li&gt;RegExp&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;基本数据类型是存放在栈中，在栈中存放的是对应的值&lt;/p&gt;
+
+&lt;p&gt;引用数据类型对应的值是存放在堆中，在栈中存放的是指向堆内存的指针（地址）&lt;/p&gt;
+
+&lt;h2 id=&quot;数组的常用方法&quot;&gt;数组的常用方法&lt;/h2&gt;
+
+&lt;p&gt;会改变原数组方法：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;push()&lt;/li&gt;
+  &lt;li&gt;pop()&lt;/li&gt;
+  &lt;li&gt;unshift()&lt;/li&gt;
+  &lt;li&gt;shift()&lt;/li&gt;
+  &lt;li&gt;splice()&lt;/li&gt;
+  &lt;li&gt;reverse()&lt;/li&gt;
+  &lt;li&gt;sort()&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;不会改变原数组方法：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;concat()&lt;/li&gt;
+  &lt;li&gt;slice()&lt;/li&gt;
+  &lt;li&gt;indexOf&lt;/li&gt;
+  &lt;li&gt;includes()&lt;/li&gt;
+  &lt;li&gt;find()&lt;/li&gt;
+  &lt;li&gt;join()&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>LiMeng</name></author><category term="面试题" /><summary type="html">防抖与节流 函数防抖：在事件被触发n秒后再执行回调，如果在这n秒内又被触发，则重新计时。 例：在用户输入信息，请求接口时 函数节流：规定在一个单位时间内，只能触发一次函数。如果这个单位时间内触发多次函数，只有一次生效。 例：在页面下拉加载时 数据类型 在JavaScript中，我们可以分成两种类型： 基本数据类型 Number String Boolean Null Undefined Symbol 引用数据类型 Object Array Function Date RegExp 基本数据类型是存放在栈中，在栈中存放的是对应的值 引用数据类型对应的值是存放在堆中，在栈中存放的是指向堆内存的指针（地址） 数组的常用方法 会改变原数组方法： push() pop() unshift() shift() splice() reverse() sort() 不会改变原数组方法： concat() slice() indexOf includes() find() join()</summary></entry><entry><title type="html">2022-面试题-React</title><link href="http://localhost:4000/2022/07/04/interview-react.html" rel="alternate" type="text/html" title="2022-面试题-React" /><published>2022-07-04T00:00:00+08:00</published><updated>2022-07-04T00:00:00+08:00</updated><id>http://localhost:4000/2022/07/04/interview-react</id><content type="html" xml:base="http://localhost:4000/2022/07/04/interview-react.html">&lt;h1 id=&quot;react&quot;&gt;React&lt;/h1&gt;
 
 &lt;h2 id=&quot;react是什么&quot;&gt;React是什么&lt;/h2&gt;
 

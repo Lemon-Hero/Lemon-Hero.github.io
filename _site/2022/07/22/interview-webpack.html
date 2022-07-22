@@ -1,11 +1,10 @@
 <!DOCTYPE html><html lang="zh">
   <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>主页 - LiMeng Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"><title>2022-面试题-Webpack - LiMeng Blog</title>
 
-<meta name="description" content="This is Li Meng's personal blog
-">
-<link rel="canonical" href="http://localhost:4000/"><link rel="alternate" type="application/rss+xml" title="LiMeng Blog" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
+<meta name="description" content="">
+<link rel="canonical" href="http://localhost:4000/2022/07/22/interview-webpack.html"><link rel="alternate" type="application/rss+xml" title="LiMeng Blog" href="/feed.xml"><!-- start favicons snippet, use https://realfavicongenerator.net/ --><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png"><link rel="manifest" href="/assets/site.webmanifest"><link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#fc4d50"><link rel="shortcut icon" href="/assets/favicon.ico">
 
 <meta name="msapplication-TileColor" content="#ffc40d"><meta name="msapplication-config" content="/assets/browserconfig.xml">
 
@@ -255,410 +254,105 @@
 </head>
   <body>
     <div class="root" data-is-touch="false">
-      <div class="layout--page js-page-root">
-<div class="page__main js-page-main page__viewport cell cell--auto">
+      <div class="layout--page js-page-root"><div class="page__main js-page-main page__viewport has-aside cell cell--auto">
 
-      <div class="page__main-inner">
-<div class="page__header d-print-none">
-<header class="header"><div class="main">
+      <div class="page__main-inner"><div class="page__header d-print-none"><header class="header"><div class="main">
       <div class="header__title">
-        <div class="header__brand">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewbox="0 0 24 24">
+        <div class="header__brand"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="24px" height="24px" viewBox="0 0 24 24">
 <style type="text/css">
 	.st0{fill:#515151;}
 </style>
 <path class="st0" d="M1.7,22.3c5.7-5.7,11.3-5.7,17,0c3.3-3.3,3.5-5.3,0.8-6c2.7,0.7,3.5-1.1,2.3-5.6s-3.3-5.2-6.3-2.1
-	c3-3,2.3-5.2-2.1-6.3S7,1.8,7.7,4.6C7,1.8,5,2.1,1.7,5.3C7.3,11,7.3,16.7,1.7,22.3"></path>
+	c3-3,2.3-5.2-2.1-6.3S7,1.8,7.7,4.6C7,1.8,5,2.1,1.7,5.3C7.3,11,7.3,16.7,1.7,22.3"/>
 </svg>
 <a title="This is Li Meng's personal blog
-" href="/">LiMeng Blog</a>
-</div>
-<button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button>
-</div>
-<nav class="navigation">
-        <ul>
-<li class="navigation__item"><a href="/archive.html">归档</a></li>
-<li class="navigation__item"><a href="/about.html">关于</a></li>
-<li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li>
-</ul>
-      </nav>
-</div>
+" href="/">LiMeng Blog</a></div><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></div><nav class="navigation">
+        <ul><li class="navigation__item"><a href="/archive.html">归档</a></li><li class="navigation__item"><a href="/about.html">关于</a></li><li><button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button></li></ul>
+      </nav></div>
   </header>
-</div>
-<div class="page__content"><div class="main"><div class="grid grid--reverse">
+</div><div class="page__content"><div class ="main"><div class="grid grid--reverse">
 
-              <div class="col-aside d-print-none js-col-aside"></div>
+              <div class="col-aside d-print-none js-col-aside"><aside class="page__aside js-page-aside"><div class="toc-aside js-toc-root"></div>
+</aside></div>
 
-              <div class="col-main cell cell--auto">
-<!-- start custom main top snippet -->
+              <div class="col-main cell cell--auto"><!-- start custom main top snippet -->
 
 <!-- end custom main top snippet -->
-<article itemscope itemtype="http://schema.org/WebPage"><header style="display:none;"><h1>主页</h1></header><meta itemprop="headline" content="主页">
-<meta itemprop="author" content="LiMeng">
-<div class="js-article-content">
-<div class="layout--articles">
-<div class="article-list items items--divided">
-<article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/2022/07/22/interview-webpack.html"><h2 itemprop="headline" class="item__header">2022-面试题-Webpack</h2></a></header>
-          <div class="item__description">
-<div class="article__content" itemprop="description articleBody"></div>
-<p><a href="/2022/07/22/interview-webpack.html">阅读更多</a></p>
+<article itemscope itemtype="http://schema.org/Article"><div class="article__header"><header><h1>2022-面试题-Webpack</h1></header><span class="split-space">&nbsp;</span>
+          <a class="edit-on-github"
+            title="在 Github 上修改"
+            href="https://github.com/Lemon-Hero/Lemon-Hero.github.io/tree/master/_posts/2022-07-22-interview-webpack.md">
+            <i class="far fa-edit"></i></a></div><meta itemprop="headline" content="2022-面试题-Webpack"><div class="article__info clearfix"><ul class="left-col menu"><li>
+              <a class="button button--secondary button--pill button--sm"
+                href="/archive.html?tag=%E9%9D%A2%E8%AF%95%E9%A2%98">面试题</a>
+            </li></ul><ul class="right-col menu"><li><i class="far fa-calendar-alt"></i> <span>2022年 07月22日</span>
+            </li><li><i class="far fa-eye"></i> <span class="js-pageview" data-page-key="20211119_lemon_blog">0</span> 阅读</li></ul></div><meta itemprop="author" content="LiMeng"/><meta itemprop="datePublished" content="2022-07-22T00:00:00+08:00">
+    <meta itemprop="keywords" content="面试题"><div class="js-article-content"><div class="layout--article"><!-- start custom article top snippet -->
+
+<!-- end custom article top snippet -->
+<div class="article__content" itemprop="articleBody">
+</div><section class="article__sharing d-print-none"></section><div class="d-print-none"><footer class="article__footer"><meta itemprop="dateModified" content="2022-07-22T00:00:00+08:00"><!-- start custom article footer snippet -->
+
+<!-- end custom article footer snippet -->
+<div class="article__subscribe"><div class="subscribe"><i class="fas fa-rss"></i> <a type="application/rss+xml" href="/feed.xml">订阅</a></div>
+</div><div class="article__license"><div class="license">
+    <p>本文遵守 <a itemprop="license" rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">Attribution-NonCommercial 4.0 International</a> 许可协议。
+      <a rel="license" href="https://creativecommons.org/licenses/by-nc/4.0/">
+        <img alt="Attribution-NonCommercial 4.0 International" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
+      </a>
+    </p>
+  </div></div></footer>
+<div class="article__section-navigator clearfix"><div class="previous"><span>上篇</span><a href="/2022/07/22/interview-http.html">2022-面试题-HTTP</a></div></div></div>
+
 </div>
-<div class="article__info clearfix">
-<ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm" href="/archive.html?tag=%E9%9D%A2%E8%AF%95%E9%A2%98">面试题</a>
-            </li></ul>
-<ul class="right-col menu">
-<li>
-<i class="far fa-calendar-alt"></i> <span>2022年 07月22日</span>
-            </li>
-<li>
-<i class="far fa-eye"></i> <span class="js-pageview" data-page-key="20211119_lemon_blog">0</span> 阅读</li>
-</ul>
-</div>
-<meta itemprop="author" content="LiMeng">
-<meta itemprop="datePublished" content="2022-07-22T00:00:00+08:00">
-    <meta itemprop="keywords" content="面试题">
-</div>
-      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/2022/07/22/interview-http.html"><h2 itemprop="headline" class="item__header">2022-面试题-HTTP</h2></a></header>
-          <div class="item__description">
-<div class="article__content" itemprop="description articleBody"></div>
-<p><a href="/2022/07/22/interview-http.html">阅读更多</a></p>
-</div>
-<div class="article__info clearfix">
-<ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm" href="/archive.html?tag=%E9%9D%A2%E8%AF%95%E9%A2%98">面试题</a>
-            </li></ul>
-<ul class="right-col menu">
-<li>
-<i class="far fa-calendar-alt"></i> <span>2022年 07月22日</span>
-            </li>
-<li>
-<i class="far fa-eye"></i> <span class="js-pageview" data-page-key="20211119_lemon_blog">0</span> 阅读</li>
-</ul>
-</div>
-<meta itemprop="author" content="LiMeng">
-<meta itemprop="datePublished" content="2022-07-22T00:00:00+08:00">
-    <meta itemprop="keywords" content="面试题">
-</div>
-      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/2022/07/22/interview-ES6.html"><h2 itemprop="headline" class="item__header">2022-面试题-ES6</h2></a></header>
-          <div class="item__description">
-<div class="article__content" itemprop="description articleBody"></div>
-<p><a href="/2022/07/22/interview-ES6.html">阅读更多</a></p>
-</div>
-<div class="article__info clearfix">
-<ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm" href="/archive.html?tag=%E9%9D%A2%E8%AF%95%E9%A2%98">面试题</a>
-            </li></ul>
-<ul class="right-col menu">
-<li>
-<i class="far fa-calendar-alt"></i> <span>2022年 07月22日</span>
-            </li>
-<li>
-<i class="far fa-eye"></i> <span class="js-pageview" data-page-key="20211119_lemon_blog">0</span> 阅读</li>
-</ul>
-</div>
-<meta itemprop="author" content="LiMeng">
-<meta itemprop="datePublished" content="2022-07-22T00:00:00+08:00">
-    <meta itemprop="keywords" content="面试题">
-</div>
-      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/2022/07/21/interview-js.html"><h2 itemprop="headline" class="item__header">2022-面试题-JavaScript</h2></a></header>
-          <div class="item__description">
-<div class="article__content" itemprop="description articleBody">防抖与节流
 
-函数防抖：在事件被触发n秒后再执行回调，如果在这n秒内又被触发，则重新计时。
+<script>(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    $(function() {
+      var $this ,$scroll;
+      var $articleContent = $('.js-article-content');
+      var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+      var scroll = hasSidebar ? '.js-page-main' : 'html, body';
+      $scroll = $(scroll);
 
-例：在用户输入信息，请求接口时
-
-函数节流：规定在一个单位时间内，只能触发一次函数。如果这个单位时间内触发多次函数，只有一次生效。
-
-例：在页面下拉加载时
-
-数据类型
-
-在JavaScript中，我们可以分成两种类型：
-
-
-  基本数据类型
-    
-      Number
-      String
-      Boolean
-      Null
-      Undefined
-      Symbol
-    
-  
-  引用数据类型
-    
-      Object
-      Array
-      Function
-      Date
-      RegExp
-    
-  
-...</div>
-<p><a href="/2022/07/21/interview-js.html">阅读更多</a></p>
-</div>
-<div class="article__info clearfix">
-<ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm" href="/archive.html?tag=%E9%9D%A2%E8%AF%95%E9%A2%98">面试题</a>
-            </li></ul>
-<ul class="right-col menu">
-<li>
-<i class="far fa-calendar-alt"></i> <span>2022年 07月21日</span>
-            </li>
-<li>
-<i class="far fa-eye"></i> <span class="js-pageview" data-page-key="20211119_lemon_blog">0</span> 阅读</li>
-</ul>
-</div>
-<meta itemprop="author" content="LiMeng">
-<meta itemprop="datePublished" content="2022-07-21T00:00:00+08:00">
-    <meta itemprop="keywords" content="面试题">
-</div>
-      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/2022/07/04/interview-react.html"><h2 itemprop="headline" class="item__header">2022-面试题-React</h2></a></header>
-          <div class="item__description">
-<div class="article__content" itemprop="description articleBody">React
-
-React是什么
-
-React，用于构建用户界面的 JavaScript 库，只提供了 UI 层面的解决方案
-
-遵循组件设计模式、声明式编程范式和函数式编程概念，以使前端应用程序更高效
-
-使用虚拟 DOM 来有效地操作 DOM，遵循从高阶组件到低阶组件的单向数据流
-
-帮助我们将界面分成了各个独立的小块，每一个块就是组件，这些组件之间可以组合、嵌套，构成整体的页面
-
-React 特性有很多，如：
-
-
-  JSX 语法
-  单向数据绑定
-  虚拟 DOM
-  声明式编程
-  Component组件
-
-
-Component组件该有的特点：
-
-
-  可组合：每个组件易于和其它组件一起使用，或者嵌套在另一个组件内部
-  可重用：每个组件都是具有独立功能的，它可以被使用在多个 UI ...</div>
-<p><a href="/2022/07/04/interview-react.html">阅读更多</a></p>
-</div>
-<div class="article__info clearfix">
-<ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm" href="/archive.html?tag=%E9%9D%A2%E8%AF%95%E9%A2%98">面试题</a>
-            </li></ul>
-<ul class="right-col menu">
-<li>
-<i class="far fa-calendar-alt"></i> <span>2022年 07月04日</span>
-            </li>
-<li>
-<i class="far fa-eye"></i> <span class="js-pageview" data-page-key="20211119_lemon_blog">0</span> 阅读</li>
-</ul>
-</div>
-<meta itemprop="author" content="LiMeng">
-<meta itemprop="datePublished" content="2022-07-04T00:00:00+08:00">
-    <meta itemprop="keywords" content="面试题">
-</div>
-      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/2021/11/19/visualization.html"><h2 itemprop="headline" class="item__header">2021-SVG学习</h2></a></header>
-          <div class="item__description">
-<div class="article__content" itemprop="description articleBody">SVG
-
-概述
-
-SVG 是一种基于 XML 语法的图像格式，全称是可缩放矢量图（Scalable Vector Graphics）。其他图像格式都是基于像素的，SVG 则是属于对图像的数学描述，所以它本质上是文本文件，体积较小，且不管放大多少倍都不会失真。
-
-SVG 文件可以直接插入网页，成为 DOM 的一部分，然后用 JavaScript 和 CSS 进行操作。
-
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;&lt;/head&gt;
-&lt;body&gt;
-&lt;svg
-  id="mysvg"
-  xmlns="http://www.w3.org/2000/svg"
-  viewBox="0 0 800 600"
-  pre...</div>
-<p><a href="/2021/11/19/visualization.html">阅读更多</a></p>
-</div>
-<div class="article__info clearfix">
-<ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm" href="/archive.html?tag=%E5%8F%AF%E8%A7%86%E5%8C%96">可视化</a>
-            </li></ul>
-<ul class="right-col menu">
-<li>
-<i class="far fa-calendar-alt"></i> <span>2021年 11月19日</span>
-            </li>
-<li>
-<i class="far fa-eye"></i> <span class="js-pageview" data-page-key="20211119_lemon_blog">0</span> 阅读</li>
-</ul>
-</div>
-<meta itemprop="author" content="LiMeng">
-<meta itemprop="datePublished" content="2021-11-19T00:00:00+08:00">
-    <meta itemprop="keywords" content="可视化">
-</div>
-      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/2021/11/09/review.html"><h2 itemprop="headline" class="item__header">2021-11 复习</h2></a></header>
-          <div class="item__description">
-<div class="article__content" itemprop="description articleBody">1. 交换两个变量的值
-
-
-  不借助第三方变量 和 ES6 的解构
-
-
-代码题如下：
-
-let a = 1;
-let b = 2;
-// 面试者操作
-// ...
-console.log(a); // 2
-console.log(b); // 1
-
-
-题解1：
-
-let a = 1;
-let b = 2;
-
-a = [b, (b = a)][0];
-
-console.log(a); // 2
-console.log(b); // 1
-
-
-题解2：
-
-let a = 1;
-let b = 2;
-
-a = a + b;
-b = a - b;
-a = a - b;
-
-console.log(a); // 2
-console.log(b); // 1
-
-
-2. 什么是柯里化?
-
-
-    柯...</div>
-<p><a href="/2021/11/09/review.html">阅读更多</a></p>
-</div>
-<div class="article__info clearfix">
-<ul class="left-col menu"><li>
-              <a class="button button--secondary button--pill button--sm" href="/archive.html?tag=%E5%A4%8D%E4%B9%A0">复习</a>
-            </li></ul>
-<ul class="right-col menu">
-<li>
-<i class="far fa-calendar-alt"></i> <span>2021年 11月09日</span>
-            </li>
-<li>
-<i class="far fa-eye"></i> <span class="js-pageview" data-page-key="20211109_lemon_blog">0</span> 阅读</li>
-</ul>
-</div>
-<meta itemprop="author" content="LiMeng">
-<meta itemprop="datePublished" content="2021-11-09T00:00:00+08:00">
-    <meta itemprop="keywords" content="复习">
-</div>
-      </article><article class="item" itemscope itemtype="http://schema.org/BlogPosting"><div class="item__content">
-          <header><a href="/2018/07/01/welcome.html"><h2 itemprop="headline" class="item__header">Welcome text</h2></a></header>
-          <div class="item__description">
-<div class="article__content" itemprop="description articleBody">If you see this page, that means you have setup your site. enjoy! <img class="emoji" title=":ghost:" alt=":ghost:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f47b.png" height="20" width="20"> <img class="emoji" title=":ghost:" alt=":ghost:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f47b.png" height="20" width="20"> <img class="emoji" title=":ghost:" alt=":ghost:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f47b.png" height="20" width="20">
-
-You may want to config the site or writing a post next. Please feel free to create an issue or send me email if you have any questions this is a question. you may need study this task.</div>
-<p><a href="/2018/07/01/welcome.html">阅读更多</a></p>
-</div>
-<div class="article__info clearfix">
-<ul class="left-col menu">
-<li>
-              <a class="button button--secondary button--pill button--sm" href="/archive.html?tag=TeXt">TeXt</a>
-            </li>
-<li>
-              <a class="button button--secondary button--pill button--sm" href="/archive.html?tag=%E6%B5%8B%E8%AF%95%E6%98%BE%E7%A4%BA%E6%98%AF%E5%90%A6%E6%AD%A3%E7%A1%AE">测试显示是否正确</a>
-            </li>
-</ul>
-<ul class="right-col menu">
-<li>
-<i class="far fa-calendar-alt"></i> <span>2018年 07月01日</span>
-            </li>
-<li>
-<i class="far fa-eye"></i> <span class="js-pageview" data-page-key="">0</span> 阅读</li>
-</ul>
-</div>
-<meta itemprop="author" content="LiMeng">
-<meta itemprop="datePublished" content="2018-07-01T00:00:00+08:00">
-    <meta itemprop="keywords" content="TeXt,测试显示是否正确">
-</div>
-      </article>
-</div>
-</div>
-<div class="layout--home"><div class="pagination">
-<p>共计 9 篇文章，2 页。</p>
-    <div class="pagination__menu">
-      <ul class="menu menu--nowrap">
-<li><div class="button button--secondary button--circle disabled">
-            <i class="fas fa-angle-left"></i>
-          </div></li>
-<li>
-              <div class="button button--primary button--circle focus"><span>1</span></div>
-            </li>
-<li>
-                <a class="button button--secondary button--circle" href="/page2"><span>2</span></a>
-              </li>
-<li><a class="button button--secondary button--circle" href="/page2">
-            <i class="fas fa-angle-right"></i>
-          </a></li>
-</ul>
-    </div>
-  </div></div>
-<script>/*(function () {
-
-})();*/
+      $articleContent.find('.highlight').each(function() {
+        $this = $(this);
+        $this.attr('data-lang', $this.find('code').attr('data-lang'));
+      });
+      $articleContent.find('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]').each(function() {
+        $this = $(this);
+        $this.append($('<a class="anchor d-print-none" aria-hidden="true"></a>').html('<i class="fas fa-anchor"></i>'));
+      });
+      $articleContent.on('click', '.anchor', function() {
+        $scroll.scrollToAnchor('#' + $(this).parent().attr('id'), 400);
+      });
+    });
+  });
+})();
 </script>
-
-
-
-</div>
-<section class="page__comments d-print-none"></section></article><!-- start custom main bottom snippet -->
+</div><section class="page__comments d-print-none"></section></article><!-- start custom main bottom snippet -->
 
 <!-- end custom main bottom snippet -->
 </div>
-            </div></div></div>
-<div class="page__footer d-print-none">
+            </div></div></div><div class="page__footer d-print-none">
 <footer class="footer py-4 js-page-footer">
-  <div class="main">
-<div itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="LiMeng">
-<meta itemprop="url" content="/">
-<meta itemprop="description" content="Thousand mile code that loves to learn.">
-<div class="footer__author-links">
-<div class="author-links">
+  <div class="main"><div itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LiMeng"><meta itemprop="url" content="/"><meta itemprop="description" content="Thousand mile code that loves to learn."><div class="footer__author-links"><div class="author-links">
   <ul class="menu menu--nowrap menu--inline"></ul>
 </div>
 </div>
-    </div>
-<div class="site-info mt-2">
+    </div><div class="site-info mt-2">
       <div>© LiMeng Blog 2021,
-        Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> &amp; <a title="TeXt is a super customizable Jekyll theme." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
+        Powered by <a title="Jekyll is a simple, blog-aware, static site generator." href="http://jekyllrb.com/">Jekyll</a> & <a
+        title="TeXt is a super customizable Jekyll theme." href="https://github.com/kitian616/jekyll-TeXt-theme">TeXt Theme</a>.
       </div>
     </div>
   </div>
 </footer>
-</div>
-</div>
-    </div>
-<script>(function() {
+</div></div>
+    </div><script>(function() {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
     var $body = $('body'), $window = $(window);
@@ -722,8 +416,7 @@ You may want to config the site or writing a post next. Please feel free to crea
     $.fn.modal = modal;
   });
 })();
-</script><div class="modal modal--overflow page__search-modal d-print-none js-page-search-modal">
-<script>
+</script><div class="modal modal--overflow page__search-modal d-print-none js-page-search-modal"><script>
 (function () {
   var SOURCES = window.TEXT_VARIABLES.sources;
   window.Lazyload.js(SOURCES.jquery, function() {
@@ -815,7 +508,7 @@ You may want to config the site or writing a post next. Please feel free to crea
     <div class="search-bar">
       <div class="search-box js-search-box">
         <div class="search-box__icon-search"><i class="fas fa-search"></i></div>
-        <input type="text">
+        <input type="text" />
         <div class="search-box__icon-clear js-icon-clear">
           <a><i class="fas fa-times"></i></a>
         </div>
@@ -939,8 +632,7 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
   });
 });
 </script>
-</div>
-</div>
+</div></div>
 
 
 <script>(function() {
@@ -1177,6 +869,68 @@ window.Lazyload.js([SOURCES.jquery, PAHTS.search_js], function() {
 /*(function () {
 
 })();*/
+</script><script>
+  /* toc must before affix, since affix need to konw toc' height. */(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  var TOC_SELECTOR = window.TEXT_VARIABLES.site.toc.selectors;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $window = $(window);
+    var $articleContent = $('.js-article-content');
+    var $tocRoot = $('.js-toc-root'), $col2 = $('.js-col-aside');
+    var toc;
+    var tocDisabled = false;
+    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+    var hasToc = $articleContent.find(TOC_SELECTOR).length > 0;
+
+    function disabled() {
+      return $col2.css('display') === 'none' || !hasToc;
+    }
+
+    tocDisabled = disabled();
+
+    toc = $tocRoot.toc({
+      selectors: TOC_SELECTOR,
+      container: $articleContent,
+      scrollTarget: hasSidebar ? '.js-page-main' : null,
+      scroller: hasSidebar ? '.js-page-main' : null,
+      disabled: tocDisabled
+    });
+
+    $window.on('resize', window.throttle(function() {
+      tocDisabled = disabled();
+      toc && toc.setOptions({
+        disabled: tocDisabled
+      });
+    }, 100));
+
+  });
+})();
+(function() {
+  var SOURCES = window.TEXT_VARIABLES.sources;
+  window.Lazyload.js(SOURCES.jquery, function() {
+    var $window = $(window), $pageFooter = $('.js-page-footer');
+    var $pageAside = $('.js-page-aside');
+    var affix;
+    var tocDisabled = false;
+    var hasSidebar = $('.js-page-root').hasClass('layout--page--sidebar');
+
+    affix = $pageAside.affix({
+      offsetBottom: $pageFooter.outerHeight(),
+      scrollTarget: hasSidebar ? '.js-page-main' : null,
+      scroller: hasSidebar ? '.js-page-main' : null,
+      scroll: hasSidebar ? $('.js-page-main').children() : null,
+      disabled: tocDisabled
+    });
+
+    $window.on('resize', window.throttle(function() {
+      affix && affix.setOptions({
+        disabled: tocDisabled
+      });
+    }, 100));
+
+    window.pageAsideAffix = affix;
+  });
+})();
 </script><script>
   window.Lazyload.js(['https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js', 'https://cdn.bootcss.com/Chart.js/2.7.2/Chart.bundle.min.js'], function() {
     var $canvas = null, $this = null, _ctx = null, _text = '';
