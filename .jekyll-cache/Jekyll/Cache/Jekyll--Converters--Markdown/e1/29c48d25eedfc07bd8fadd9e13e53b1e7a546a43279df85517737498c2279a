@@ -1,0 +1,103 @@
+I"�<h2 id="防抖与节流">防抖与节流</h2>
+
+<p>函数防抖：在事件被触发n秒后再执行回调，如果在这n秒内又被触发，则重新计时。</p>
+
+<p>例：在用户输入信息，请求接口时</p>
+
+<p>函数节流：规定在一个单位时间内，只能触发一次函数。如果这个单位时间内触发多次函数，只有一次生效。</p>
+
+<p>例：在页面下拉加载时</p>
+
+<h2 id="数据类型">数据类型</h2>
+
+<p>在<code class="language-plaintext highlighter-rouge">JavaScript</code>中，我们可以分成两种类型：</p>
+
+<ul>
+  <li>基本数据类型
+    <ul>
+      <li>Number</li>
+      <li>String</li>
+      <li>Boolean</li>
+      <li>Null</li>
+      <li>Undefined</li>
+      <li>Symbol</li>
+    </ul>
+  </li>
+  <li>引用数据类型
+    <ul>
+      <li>Object</li>
+      <li>Array</li>
+      <li>Function</li>
+      <li>Date</li>
+      <li>RegExp</li>
+    </ul>
+  </li>
+</ul>
+
+<p>基本数据类型是存放在栈中，在栈中存放的是对应的值</p>
+
+<p>引用数据类型对应的值是存放在堆中，在栈中存放的是指向堆内存的指针（地址）</p>
+
+<h2 id="数组的常用方法">数组的常用方法</h2>
+
+<p>会改变原数组方法：</p>
+
+<ul>
+  <li>push()</li>
+  <li>pop()</li>
+  <li>unshift()</li>
+  <li>shift()</li>
+  <li>splice()</li>
+  <li>reverse()</li>
+  <li>sort()</li>
+</ul>
+
+<p>不会改变原数组方法：</p>
+
+<ul>
+  <li>concat()</li>
+  <li>slice()</li>
+  <li>indexOf</li>
+  <li>includes()</li>
+  <li>find()</li>
+  <li>join()</li>
+  <li>some()</li>
+  <li>every()</li>
+  <li>forEach()</li>
+  <li>filter()</li>
+  <li>map()</li>
+</ul>
+
+<h2 id="js-深拷贝浅拷贝理解与写法">JS 深拷贝、浅拷贝理解与写法</h2>
+
+<h2 id="js宏任务与微任务">JS宏任务与微任务</h2>
+
+<p><a href="https://segmentfault.com/a/1190000040014996">https://segmentfault.com/a/1190000040014996</a></p>
+
+<p><a href="https://juejin.cn/post/6982494781834264612">https://juejin.cn/post/6982494781834264612</a></p>
+
+<h2 id="js-event-loop">JS Event Loop</h2>
+
+<h2 id="js的垃圾回收机制">JS的垃圾回收机制</h2>
+
+<p><a href="https://segmentfault.com/a/1190000038175558">https://segmentfault.com/a/1190000038175558</a></p>
+
+<p><a href="https://developer.51cto.com/article/683431.html">https://developer.51cto.com/article/683431.html</a></p>
+
+<h2 id="面向对象的三大基本特征和五大基本原则">面向对象的三大基本特征和五大基本原则</h2>
+
+<h2 id="js继承">JS继承</h2>
+
+<p><a href="https://segmentfault.com/a/1190000015216289">https://segmentfault.com/a/1190000015216289</a></p>
+
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain</a></p>
+
+<h2 id="js原型与原型链">JS原型与原型链</h2>
+
+<p><a href="https://segmentfault.com/a/1190000021787756">https://segmentfault.com/a/1190000021787756</a></p>
+
+<p><a href="https://segmentfault.com/a/1190000021232132">https://segmentfault.com/a/1190000021232132</a></p>
+
+<h2 id="jsbridge-介绍及实现原理">JSBridge 介绍及实现原理</h2>
+<p><a href="http://coolnuanfeng.github.io/jsbridge">http://coolnuanfeng.github.io/jsbridge</a></p>
+:ET
