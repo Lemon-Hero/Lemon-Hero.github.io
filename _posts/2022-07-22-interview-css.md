@@ -16,3 +16,9 @@ CSS居中方式
 ---
 
 <https://segmentfault.com/a/1190000013966650>
+
+CSS flex-direction
+---
+
+横向：row
+竖向：column

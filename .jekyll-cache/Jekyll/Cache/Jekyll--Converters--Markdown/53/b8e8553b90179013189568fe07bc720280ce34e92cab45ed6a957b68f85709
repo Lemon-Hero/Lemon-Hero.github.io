@@ -1,0 +1,29 @@
+I"<h2 id="js中树形结构数据的深度遍历和广度遍历">js中树形结构数据的深度遍历和广度遍历</h2>
+
+<p><a href="https://juejin.cn/post/7001004885965537288">https://juejin.cn/post/7001004885965537288</a></p>
+
+<p><a href="https://blog.csdn.net/w544924116/article/details/119712713">https://blog.csdn.net/w544924116/article/details/119712713</a></p>
+
+<h2 id="js版本比较">js版本比较</h2>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 版本比较</span>
+<span class="kd">function</span> <span class="nx">version_compare</span><span class="p">(</span><span class="nx">v1</span><span class="p">,</span> <span class="nx">v2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//将两个版本号拆成数组</span>
+    <span class="kd">var</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="nx">v1</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="dl">'</span><span class="s1">.</span><span class="dl">'</span><span class="p">),</span>
+        <span class="nx">arr2</span> <span class="o">=</span> <span class="nx">v2</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="dl">'</span><span class="s1">.</span><span class="dl">'</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">minLength</span><span class="o">=</span><span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="nx">arr1</span><span class="p">.</span><span class="nx">length</span><span class="p">,</span><span class="nx">arr2</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+    <span class="c1">//依次比较版本号每一位大小</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">minLength</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">arr1</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="o">!=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">arr2</span><span class="p">[</span><span class="nx">i</span><span class="p">]))</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">(</span><span class="nb">parseInt</span><span class="p">(</span><span class="nx">arr1</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="o">&gt;</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">arr2</span><span class="p">[</span><span class="nx">i</span><span class="p">]))</span> <span class="p">?</span> <span class="mi">1</span> <span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="c1">// 若前几位分隔相同，则按分隔数比较。</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">arr1</span><span class="p">.</span><span class="nx">length</span> <span class="o">==</span> <span class="nx">arr2</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="p">(</span><span class="nx">arr1</span><span class="p">.</span><span class="nx">length</span> <span class="o">&gt;</span> <span class="nx">arr2</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span> <span class="p">?</span> <span class="mi">1</span> <span class="p">:</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+:ET
